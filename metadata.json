@@ -1,0 +1,6 @@
+{
+  "name": "Corporate Business Website",
+  "description": "A premium, highly polished corporate business website featuring Home, About, Services, and Contact pages with interactive elements, smooth motion animations, and responsive layout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
