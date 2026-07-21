@@ -1,6 +1,15 @@
 import React from 'react';
 import profileImg from '../../assets/profile.webp';
 import clinicVideo from '../../assets/video.mp4';
+import galleryImg1 from '../../assets/1.jpg';
+import galleryImg2 from '../../assets/4.jpg';
+import galleryImg3 from '../../assets/3.jpg';
+import beforeAfter1 from '../../assets/5.jpg';
+import beforeAfter2 from '../../assets/6.jpg';
+import beforeAfter3 from '../../assets/7.jpg';
+import beforeAfter4 from '../../assets/8.jpg';
+import beforeAfter5 from '../../assets/9.jpg';
+import beforeAfter6 from '../../assets/10.jpg';
 import { Page } from '../types';
 import { stats, features, services, testimonials } from '../data';
 import LucideIcon from './LucideIcon';
@@ -182,7 +191,7 @@ export default function Home({ setActivePage }: HomeProps) {
       </section>
 
       {/* 2. STATS SECTION */}
-      <section id="home-stats" className="relative z-20 -mt-8 max-w-7xl mx-auto px-6">
+      <section id="home-stats" className="relative z-20 mt-12 mb-8 max-w-7xl mx-auto px-6">
         <div className="bg-white rounded-2xl shadow-premium-lg border border-slate-100 p-8 sm:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
             <AnimatedSection
@@ -326,7 +335,7 @@ export default function Home({ setActivePage }: HomeProps) {
               className="h-80 sm:h-[420px] editorial-mask-1 overflow-hidden shadow-premium-lg relative group duotone-blue-tint cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80"
+                src={galleryImg1}
                 alt="Patient consultation"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
@@ -343,7 +352,7 @@ export default function Home({ setActivePage }: HomeProps) {
               className="h-80 sm:h-[420px] md:translate-y-8 editorial-mask-2 overflow-hidden shadow-premium-lg relative group duotone-blue-tint cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1598256989800-fea992040c30?auto=format&fit=crop&w=600&q=80"
+                src={galleryImg2}
                 alt="Dental procedure"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
@@ -360,7 +369,7 @@ export default function Home({ setActivePage }: HomeProps) {
               className="h-80 sm:h-[420px] rounded-3xl rounded-tl-none rounded-br-none overflow-hidden shadow-premium-lg relative group duotone-blue-tint cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600&q=80"
+                src={galleryImg3}
                 alt="Patient smiling"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
@@ -376,73 +385,49 @@ export default function Home({ setActivePage }: HomeProps) {
         </div>
       </section>
 
-      {/* 5. SERVICES PREVIEW */}
-      <section id="home-services-preview" className="py-24 bg-white relative">
+      {/* 5. BEFORE & AFTER GALLERY */}
+      <section id="home-before-after" className="py-24 bg-white relative">
         <div className="absolute top-0 right-0 w-80 h-80 bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6">
           
           <AnimatedSection direction="up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <SectionHeading
-              title="Comprehensive Dental Services"
-              subtitle="From routine cleanings to complete smile makeovers, we offer a full spectrum of dental treatments tailored to your unique needs."
-              badge="Our Services"
-              watermark="TREATMENTS"
-              accentWord="Dental"
+              title="Before & After Results"
+              subtitle="Real patients, real results. See how Dr. Unwala and the team at Aurus Dental Studio have transformed smiles with precision and care."
+              badge="Transformations"
+              watermark="RESULTS"
+              accentWord="Results"
             />
             <button
               id="services-preview-view-all"
               onClick={() => handleNavigate('services')}
               className="group inline-flex items-center text-sm font-bold text-brand-blue hover:text-brand-blue-hover transition-colors cursor-pointer"
             >
-              <span>Explore All Capabilities</span>
+              <span>Explore All Services</span>
               <span className="ml-2 w-7 h-7 rounded-full bg-brand-blue-light text-brand-blue flex items-center justify-center group-hover:translate-x-1.5 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
                 <LucideIcon name="ArrowRight" size={14} />
               </span>
             </button>
           </AnimatedSection>
 
-          {/* Cards with Custom shadows, zoom photography, and gradient icon backings */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.slice(0, 3).map((service, idx) => (
+          {/* 6 Image Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[beforeAfter1, beforeAfter2, beforeAfter3, beforeAfter4, beforeAfter5, beforeAfter6].map((img, idx) => (
               <AnimatedSection
-                key={service.id}
+                key={idx}
                 direction="up"
-                delay={0.15 * idx}
-                className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/10 transition-all duration-500 flex flex-col group"
+                delay={0.1 * idx}
+                className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/20 transition-all duration-500 group relative aspect-[4/3] cursor-pointer"
               >
-                <div className="h-56 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-brand-blue/10 group-hover:opacity-0 transition-opacity duration-500 z-10 mix-blend-multiply" />
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                  <span className="absolute top-4 left-4 bg-deep-navy/85 backdrop-blur-md px-3.5 py-1.5 text-xs font-mono font-bold text-white tracking-widest rounded-lg shadow-md z-20">
-                    {service.tag}
+                <img
+                  src={img}
+                  alt={`Before and After Transformation ${idx + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                  <span className="text-white font-display font-extrabold text-lg flex items-center">
+                    View Case <LucideIcon name="ArrowRight" size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
-                </div>
-                
-                <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
-                  <div>
-                    <h3 className="font-display font-extrabold text-xl text-deep-navy group-hover:text-brand-blue transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-slate-500 leading-relaxed mt-3 line-clamp-3">
-                      {service.description}
-                    </p>
-                  </div>
-                  
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <button
-                      id={`service-preview-btn-${service.id}`}
-                      onClick={() => handleNavigate('services')}
-                      className="inline-flex items-center text-xs font-bold text-brand-blue hover:text-brand-blue-hover cursor-pointer"
-                    >
-                      <span>View Framework Details</span>
-                      <LucideIcon name="ChevronRight" className="ml-1 group-hover:translate-x-1.5 transition-transform duration-300" size={14} />
-                    </button>
-                    <span className="font-mono text-xs text-slate-300 font-bold">0{idx + 1}</span>
-                  </div>
                 </div>
               </AnimatedSection>
             ))}

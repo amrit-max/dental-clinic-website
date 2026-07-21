@@ -37,6 +37,8 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const useDarkText = isScrolled || activePage !== 'home';
+
   return (
     <header
       id="main-navbar"
@@ -57,7 +59,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
             <LucideIcon name="Smile" size={20} />
           </div>
           <span className={`font-display font-extrabold text-xl tracking-tight transition-colors duration-300 ${
-            isScrolled ? 'text-deep-navy' : 'text-white'
+            useDarkText ? 'text-deep-navy' : 'text-white'
           }`}>
             AURUS<span className="text-brand-blue">DENTAL</span>
           </span>
@@ -75,8 +77,8 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
                     onClick={() => handlePageChange(item.value)}
                     className={`relative py-2 text-sm font-bold tracking-widest uppercase transition-colors duration-300 cursor-pointer focus:outline-none ${
                       isActive 
-                        ? (isScrolled ? 'text-brand-blue' : 'text-accent-amber') 
-                        : (isScrolled ? 'text-slate-600 hover:text-deep-navy' : 'text-slate-300 hover:text-white')
+                        ? (useDarkText ? 'text-brand-blue' : 'text-accent-amber') 
+                        : (useDarkText ? 'text-slate-600 hover:text-deep-navy' : 'text-slate-300 hover:text-white')
                     }`}
                   >
                     {item.label}
@@ -84,7 +86,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
                       <motion.div
                         layoutId="activeIndicator"
                         className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${
-                          isScrolled ? 'bg-brand-blue' : 'bg-accent-amber'
+                          useDarkText ? 'bg-brand-blue' : 'bg-accent-amber'
                         }`}
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
@@ -99,7 +101,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
             id="nav-cta-btn"
             onClick={() => handlePageChange('contact')}
             className={`group relative inline-flex items-center justify-center px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 overflow-hidden cursor-pointer ${
-              isScrolled
+              useDarkText
                 ? 'bg-brand-blue hover:bg-brand-blue-hover text-white shadow-md shadow-brand-blue/15 hover:shadow-lg'
                 : 'bg-white hover:bg-white/10 text-deep-navy hover:text-white border border-white/20'
             }`}
@@ -121,7 +123,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
             id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`p-2 rounded-lg focus:outline-none transition-colors cursor-pointer ${
-              isScrolled ? 'text-slate-600 hover:bg-slate-100 hover:text-deep-navy' : 'text-slate-200 hover:bg-white/5 hover:text-white'
+              useDarkText ? 'text-slate-600 hover:bg-slate-100 hover:text-deep-navy' : 'text-slate-200 hover:bg-white/5 hover:text-white'
             }`}
             aria-label="Toggle Menu"
           >

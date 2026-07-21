@@ -66,41 +66,8 @@ export default function Services({ setActivePage }: ServicesProps) {
   return (
     <div id="services-page-container" className="overflow-x-hidden bg-white">
       
-      {/* 1. PAGE HEADER */}
-      <section id="services-header" className="relative pt-36 pb-20 bg-deep-navy bg-dot-pattern-light overflow-hidden">
-        {/* Ambient colorful blurs */}
-        <div className="absolute top-1/2 left-1/4 w-80 h-80 rounded-full bg-brand-blue/20 blur-[125px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-accent-amber/5 blur-[100px] pointer-events-none" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <AnimatedSection direction="down" className="space-y-4">
-            {/* Breadcrumb with micro dots */}
-            <nav className="flex items-center space-x-2.5 text-xs font-mono uppercase tracking-widest text-slate-400">
-              <button
-                id="breadcrumb-home"
-                onClick={() => handleNavigate('home')}
-                className="hover:text-accent-amber transition-colors duration-200 cursor-pointer flex items-center gap-1"
-              >
-                <span className="w-1.5 h-1.5 bg-brand-blue rounded-full" />
-                Home
-              </button>
-              <LucideIcon name="ChevronRight" size={10} className="text-slate-600" />
-              <span className="text-white font-semibold">Services</span>
-            </nav>
-
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber italic font-light">Capabilities</span>
-            </h1>
-
-            <p className="text-slate-300 max-w-2xl text-base sm:text-lg font-light leading-relaxed">
-              Explore our structured, results-focused treatment plans engineered to unlock operational scale, structural margin expansion, and technical breakthroughs.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* 2. SERVICES GRID (Asymmetrical layout blocks with alternate staggered offsets) */}
-      <section id="services-grid" className="py-24 bg-white bg-dot-pattern">
+      <section id="services-grid" className="pt-36 pb-24 bg-white bg-dot-pattern">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection direction="up">
             <SectionHeading

@@ -79,42 +79,8 @@ export default function Contact({ setActivePage }: ContactProps) {
   return (
     <div id="contact-page-container" className="overflow-x-hidden bg-white">
       
-      {/* 1. PAGE HEADER */}
-      <section id="contact-header" className="relative pt-36 pb-20 bg-deep-navy bg-dot-pattern-light overflow-hidden">
-        {/* Soft background glow blurs */}
-        <div className="absolute top-1/2 left-1/3 w-80 h-80 rounded-full bg-brand-blue/20 blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-accent-amber/5 blur-[150px] pointer-events-none" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <AnimatedSection direction="down" className="space-y-4">
-            
-            {/* Breadcrumb with micro dots */}
-            <nav className="flex items-center space-x-2.5 text-xs font-mono uppercase tracking-widest text-slate-400">
-              <button
-                id="breadcrumb-home"
-                onClick={() => handleNavigate('home')}
-                className="hover:text-accent-amber transition-colors duration-200 cursor-pointer flex items-center gap-1"
-              >
-                <span className="w-1.5 h-1.5 bg-brand-blue rounded-full" />
-                Home
-              </button>
-              <LucideIcon name="ChevronRight" size={10} className="text-slate-600" />
-              <span className="text-white font-semibold">Contact</span>
-            </nav>
-
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none">
-              Initiate <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber italic font-light">Alignment</span>
-            </h1>
-
-            <p className="text-slate-300 max-w-2xl text-base sm:text-lg font-light leading-relaxed">
-              Establish a direct, secure channel with our senior advisory partners. We review submitted intake briefs within 4 business hours.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* 2. SPLIT LAYOUT SECTION (Asymmetric 8:4 columns layout to break visual boredom) */}
-      <section id="contact-body" className="py-24 bg-white bg-dot-pattern">
+      <section id="contact-body" className="pt-36 pb-24 bg-white bg-dot-pattern">
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
