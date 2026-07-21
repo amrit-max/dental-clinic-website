@@ -129,7 +129,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                         onClick={() => setSelectedService(service)}
                         className="group inline-flex items-center text-sm font-bold text-brand-blue hover:text-brand-blue-hover transition-colors cursor-pointer"
                       >
-                        <span>Analyze Blueprint Framework</span>
+                        <span>View Treatment Details</span>
                         <LucideIcon name="ChevronRight" className="ml-1.5 group-hover:translate-x-1 transition-transform" size={16} />
                       </button>
                       <span className="font-mono text-xs font-bold text-slate-300">[ 0{idx + 1} ]</span>
@@ -188,14 +188,14 @@ export default function Services({ setActivePage }: ServicesProps) {
 
               <div className="p-8 space-y-6">
                 <div className="space-y-2">
-                  <h4 className="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">Framework Summary</h4>
+                  <h4 className="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">Treatment Summary</h4>
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans font-light">
                     {selectedService.description}
                   </p>
                 </div>
 
                 <div className="space-y-3.5 pt-2">
-                  <h4 className="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">Core Engagements & Deliverables</h4>
+                  <h4 className="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">Core Procedures & Benefits</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {selectedService.details.map((detail, i) => (
                       <div key={i} className="flex items-center space-x-3 text-slate-700">
@@ -224,7 +224,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                     }}
                     className="group relative inline-flex items-center justify-center px-6 py-3 text-xs font-bold text-deep-navy bg-accent-amber hover:bg-accent-amber-hover rounded-xl shadow-md transition-all cursor-pointer"
                   >
-                    <span>Inquire About This Framework</span>
+                    <span>Inquire About This Treatment</span>
                     <LucideIcon name="ArrowRight" className="ml-1.5 group-hover:translate-x-1 transition-transform" size={14} />
                   </button>
                 </div>
@@ -288,152 +288,6 @@ export default function Services({ setActivePage }: ServicesProps) {
                 </AnimatedSection>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. SUPPORTING IMAGE SECTION (THE PREMIUM "DARK SECTION BREAK") */}
-      <section id="services-supporting" className="py-24 bg-deep-navy text-white relative overflow-hidden">
-        {/* Soft floating blur */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-blue/20 blur-[130px] pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-blue/10 blur-[150px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
-          {/* Left: Supporting Image with Asymmetric Shape Mask and Duotone Overlay */}
-          <div className="lg:col-span-6 relative">
-            <AnimatedSection direction="right" className="editorial-mask-1 overflow-hidden shadow-premium-lg border-2 border-white/10 relative z-10 group">
-              <div className="absolute inset-0 bg-brand-blue/10 group-hover:opacity-0 transition-opacity duration-500 z-10 mix-blend-multiply" />
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
-                alt="Dental modern skyline looking upwards"
-                className="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-            </AnimatedSection>
-            
-            {/* Overlay glow decorations */}
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent-amber/20 rounded-full blur-xl opacity-10 animate-pulse" />
-          </div>
-
-          {/* Right: Persuasive text block inside transparent glass-like layout */}
-          <div className="lg:col-span-6 space-y-8 relative z-10">
-            <AnimatedSection direction="left">
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full bg-white/5 text-accent-amber border border-white/10 font-mono">
-                <span className="w-1.5 h-1.5 bg-accent-amber rounded-full animate-ping" />
-                Operational Guarantee
-              </span>
-              <h2 className="font-display text-4xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-                No Academic Theories. <br />
-                <span className="italic font-light text-slate-300">Pure Co-Implementation</span>
-              </h2>
-            </AnimatedSection>
-
-            <div className="space-y-6 text-slate-300 leading-relaxed font-sans font-light text-base">
-              <AnimatedSection direction="up" delay={0.1}>
-                <p>
-                  We bridge the critical gap between high-level management care and modern tech infrastructure. Many firms advise you on "what to do." We build the exact operational dashboards, modernise the databases, set up continuous cloud security compliance models, and coordinate the team scaling ourselves.
-                </p>
-              </AnimatedSection>
-
-              <AnimatedSection direction="up" delay={0.2}>
-                <p>
-                  This rigorous commitment guarantees your strategic pipeline operates smoothly, reducing overhead costs, eliminating transition friction, and creating deep structural efficiency that shows up in your metrics.
-                </p>
-              </AnimatedSection>
-            </div>
-            
-            <div className="pt-2">
-              <button
-                id="services-read-story"
-                onClick={() => handleNavigate('about')}
-                className="group relative inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-deep-navy bg-accent-amber hover:bg-accent-amber-hover rounded-xl shadow-lg transition-all duration-300 cursor-pointer"
-              >
-                <span>Read Our Implementation Story</span>
-                <LucideIcon name="ArrowRight" className="ml-2 group-hover:translate-x-1.5 transition-transform" size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. PRICING OR ENGAGEMENT TIERS */}
-      <section id="services-pricing" className="py-24 bg-soft-gray border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection direction="up">
-            <SectionHeading
-              title="Transparent Partnership Tiers"
-              subtitle="Select an engagement plan designed for your company size, objective scope, and scaling speed."
-              badge="Structured Engagement"
-              watermark="PRICING"
-              accentWord="Partnership"
-              centered
-            />
-          </AnimatedSection>
-
-          {/* Pricing Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 items-stretch">
-            {pricingTiers.map((tier, idx) => (
-              <AnimatedSection
-                key={idx}
-                direction="up"
-                delay={0.1 * idx}
-                className={`bg-white rounded-3xl border p-8 flex flex-col justify-between relative transition-all duration-500 ${
-                  tier.popular
-                    ? 'border-brand-blue shadow-premium-lg scale-100 lg:scale-[1.03] lg:z-10 bg-gradient-to-b from-white to-brand-blue-light/5'
-                    : 'border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/10'
-                }`}
-              >
-                {tier.popular && (
-                  <span className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-blue-hover text-white text-[10px] font-mono font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
-                    Most Popular
-                  </span>
-                )}
-
-                <div className="space-y-8">
-                  {/* Tier Title */}
-                  <div className="space-y-3">
-                    <span className="font-mono text-xs font-bold text-accent-amber uppercase tracking-widest block">[ Tier 0{idx + 1} ]</span>
-                    <h3 className="font-display font-black text-2xl text-deep-navy">{tier.name}</h3>
-                    <p className="text-xs text-slate-400 font-semibold leading-relaxed font-sans">{tier.description}</p>
-                  </div>
-
-                  {/* Price */}
-                  <div className="py-5 border-t border-b border-slate-100 flex items-baseline">
-                    <span className="font-display font-black text-4xl sm:text-5xl text-deep-navy tracking-tight">{tier.price}</span>
-                    <span className="text-xs text-slate-500 font-bold ml-2 font-mono uppercase tracking-wider">/ {tier.period}</span>
-                  </div>
-
-                  {/* Features */}
-                  <ul className="space-y-4 text-sm">
-                    {tier.features.map((feature, i) => (
-                      <li key={i} className="flex items-start space-x-3 text-slate-600">
-                        <div className={`w-5.5 h-5.5 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border ${
-                          tier.popular 
-                            ? 'bg-brand-blue-light text-brand-blue border-brand-blue/10' 
-                            : 'bg-slate-50 text-slate-500 border-slate-100'
-                        }`}>
-                          <LucideIcon name="Check" size={13} />
-                        </div>
-                        <span className="text-sm font-medium font-sans">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* CTA btn */}
-                <button
-                  id={`pricing-btn-${idx}`}
-                  onClick={() => handleNavigate('contact')}
-                  className={`w-full mt-10 py-4 px-5 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 cursor-pointer ${
-                    tier.popular
-                      ? 'bg-brand-blue hover:bg-brand-blue-hover text-white shadow-lg shadow-brand-blue/15 hover:shadow-xl hover:shadow-brand-blue/20'
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                  }`}
-                >
-                  {tier.btnText}
-                </button>
-              </AnimatedSection>
-            ))}
           </div>
         </div>
       </section>

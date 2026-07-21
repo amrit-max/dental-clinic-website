@@ -258,20 +258,20 @@ export default function Contact({ setActivePage }: ContactProps) {
               
               <AnimatedSection direction="left" className="space-y-3">
                 <span className="inline-flex items-center gap-1 px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full bg-brand-blue-light text-brand-blue border border-brand-blue/10 font-mono">
-                  HQ Information
+                  Our Locations
                 </span>
                 <h2 className="font-display text-3xl font-black text-deep-navy tracking-tight leading-none">
-                  Global Operations
+                  Clinic Details
                 </h2>
                 <p className="text-sm text-slate-500 leading-relaxed font-sans font-light">
-                  Connect through our formal dental channels or visit our executive suite.
+                  Find our state-of-the-art facilities in Pune and Mumbai.
                 </p>
               </AnimatedSection>
 
               {/* Info Cards Stack with Custom details and layered depth */}
               <div className="space-y-6">
                 
-                {/* Address Card */}
+                {/* Pune Clinic Card */}
                 <AnimatedSection 
                   direction="left" 
                   delay={0.12} 
@@ -281,50 +281,49 @@ export default function Contact({ setActivePage }: ContactProps) {
                     <LucideIcon name="MapPin" size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h4 className="font-display font-extrabold text-base text-deep-navy">Dental Head Office</h4>
+                    <h4 className="font-display font-extrabold text-base text-deep-navy">Pune Clinic</h4>
                     <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-sans font-light">
-                      Aurus Dental Studio<br />
-                      500 Financial Center, Suite 1200<br />
-                      New York, NY 10005
+                      <span className="font-semibold text-slate-700 block mb-1">Aurus Dental Studio</span>
+                      Mittal Court, B23, opposite Mahesh Lunch Home, Rasta Peth, Pune, Maharashtra 411002
                     </p>
                   </div>
                 </AnimatedSection>
 
-                {/* Direct Lines Card */}
+                {/* Mumbai Clinic Card */}
                 <AnimatedSection 
                   direction="left" 
                   delay={0.16} 
                   className="p-6 rounded-2xl bg-white border border-slate-100 shadow-premium flex items-start space-x-5 hover:shadow-premium-lg hover:border-brand-blue/10 transition-all duration-300 group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-blue-light to-brand-blue/10 text-brand-blue flex items-center justify-center border border-brand-blue/10 shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                    <LucideIcon name="Phone" size={20} />
+                    <LucideIcon name="MapPin" size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h4 className="font-display font-extrabold text-base text-deep-navy">Immediate Direct Lines</h4>
-                    <p className="text-xs sm:text-sm text-slate-500 font-sans font-light">
-                      <span className="font-bold text-slate-700">Client Hub:</span> +1 (800) 555-AURUS
-                    </p>
-                    <p className="text-xs sm:text-sm text-slate-500 font-sans font-light">
-                      <span className="font-bold text-slate-700">Advisory:</span> contact@aurusdental.com
+                    <h4 className="font-display font-extrabold text-base text-deep-navy">Mumbai Clinic</h4>
+                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-sans font-light">
+                      <span className="font-semibold text-slate-700 block mb-1">Saifee Smiles Multispeciality</span>
+                      5C, Shamji Morarji building, Champsi Bhimji Rd, Thakkar Estate, Mazgaon, Mumbai 400010
                     </p>
                   </div>
                 </AnimatedSection>
 
-                {/* Desk Hours Card */}
+                {/* Direct Lines & Hours Card */}
                 <AnimatedSection 
                   direction="left" 
                   delay={0.2} 
                   className="p-6 rounded-2xl bg-white border border-slate-100 shadow-premium flex items-start space-x-5 hover:shadow-premium-lg hover:border-brand-blue/10 transition-all duration-300 group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-blue-light to-brand-blue/10 text-brand-blue flex items-center justify-center border border-brand-blue/10 shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                    <LucideIcon name="Clock" size={20} />
+                    <LucideIcon name="Phone" size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h4 className="font-display font-extrabold text-base text-deep-navy">Advisory Desk Hours</h4>
-                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-sans font-light">
-                      Monday - Friday: 8:00 AM - 6:00 PM EST<br />
-                      Saturday: 9:00 AM - 1:00 PM EST<br />
-                      Sunday: Closed
+                    <h4 className="font-display font-extrabold text-base text-deep-navy">Contact & Hours</h4>
+                    <p className="text-xs sm:text-sm text-slate-500 font-sans font-light">
+                      <span className="font-bold text-slate-700">Phone:</span> 098208 54665
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-500 font-sans font-light mt-2 flex items-center">
+                      <LucideIcon name="Clock" size={14} className="mr-1.5 text-brand-blue" />
+                      Open 24 hours
                     </p>
                   </div>
                 </AnimatedSection>
@@ -333,21 +332,18 @@ export default function Contact({ setActivePage }: ContactProps) {
 
               {/* Social channels block in info */}
               <AnimatedSection direction="left" delay={0.24} className="pt-6 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">Formal Channels</span>
+                <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">Social Channels</span>
                 <div className="flex space-x-3.5">
-                  {['Linkedin', 'Twitter', 'Facebook'].map((social, i) => (
-                    <a
-                      id={`contact-social-${social}`}
-                      key={i}
-                      href={`https://${social.toLowerCase()}.com`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-10 h-10 rounded-xl bg-soft-gray hover:bg-brand-blue hover:text-white text-slate-500 flex items-center justify-center border border-slate-100 hover:border-brand-blue/20 shadow-sm transition-all duration-300 cursor-pointer"
-                      aria-label={social}
-                    >
-                      <LucideIcon name={social} size={16} />
-                    </a>
-                  ))}
+                  <a
+                    id="contact-social-Instagram"
+                    href="https://www.instagram.com/its_that_dentist/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-xl bg-soft-gray hover:bg-brand-blue hover:text-white text-slate-500 flex items-center justify-center border border-slate-100 hover:border-brand-blue/20 shadow-sm transition-all duration-300 cursor-pointer"
+                    aria-label="Instagram"
+                  >
+                    <LucideIcon name="Instagram" size={16} />
+                  </a>
                 </div>
               </AnimatedSection>
             </div>
@@ -362,17 +358,39 @@ export default function Contact({ setActivePage }: ContactProps) {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <AnimatedSection direction="up" className="rounded-3xl overflow-hidden border border-slate-200/50 shadow-premium-lg h-96 relative bg-white">
-            <iframe
-              id="google-maps-placeholder-iframe"
-              src="https://www.google.com/maps/embed?pb=!11m18!1m12!1m3!1d3024.2219901290333!2d-74.0110336!3d40.7056434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a17688cb075%3A0xe6bf4be6c141d8e1!2s55%20Water%20St%2C%20New%20York%2C%20NY%2010041!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-              className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700 ease-out"
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Aurus Dental Studio Head Office Location Map"
-            />
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatedSection direction="up" delay={0.1} className="rounded-3xl overflow-hidden border border-slate-200/50 shadow-premium-lg h-96 relative bg-white flex flex-col group">
+              <div className="bg-white px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+                <h3 className="font-display font-bold text-deep-navy text-lg">Pune Clinic</h3>
+                <span className="text-xs font-mono font-semibold text-brand-blue bg-brand-blue-light px-3 py-1 rounded-full tracking-widest">AURUS DENTAL</span>
+              </div>
+              <iframe
+                id="google-maps-pune-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.310337747241!2d73.86731744527464!3d18.519958337777712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c19b6511c397%3A0xaaf20e9cb865730!2sAurus%20Dental%20Studio%20by%20Dr%20Abbas%20Unwala!5e1!3m2!1sen!2sin!4v1784627930041!5m2!1sen!2sin"
+                className="w-full flex-1 border-0 grayscale hover:grayscale-0 transition-all duration-700 ease-out"
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Aurus Dental Studio Pune Map"
+              />
+            </AnimatedSection>
+            
+            <AnimatedSection direction="up" delay={0.2} className="rounded-3xl overflow-hidden border border-slate-200/50 shadow-premium-lg h-96 relative bg-white flex flex-col group">
+              <div className="bg-white px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+                <h3 className="font-display font-bold text-deep-navy text-lg">Mumbai Clinic</h3>
+                <span className="text-xs font-mono font-semibold text-brand-blue bg-brand-blue-light px-3 py-1 rounded-full tracking-widest">SAIFEE SMILES</span>
+              </div>
+              <iframe
+                id="google-maps-mumbai-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3832.0406104855624!2d72.8427418!3d18.9718028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce4927ef9921%3A0x4c17a54c0bc25f07!2sDr%20Abbas%20Unwala&#39;s%20Saifee%20Smiles%20Multispeciality!5e1!3m2!1sen!2sin!4v1784627997309!5m2!1sen!2sin"
+                className="w-full flex-1 border-0 grayscale hover:grayscale-0 transition-all duration-700 ease-out"
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Saifee Smiles Mumbai Map"
+              />
+            </AnimatedSection>
+          </div>
         </div>
       </section>
     </div>

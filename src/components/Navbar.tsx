@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Page } from '../types';
 import LucideIcon from './LucideIcon';
+import logoImg from '../../assets/logo.webp';
 
 interface NavbarProps {
   activePage: Page;
@@ -53,12 +54,14 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
         <button
           id="navbar-logo-btn"
           onClick={() => handlePageChange('home')}
-          className="flex items-center space-x-2.5 focus:outline-none group cursor-pointer"
+          className="flex items-center space-x-3 focus:outline-none group cursor-pointer"
         >
-          <div className="w-10 h-10 rounded-xl bg-brand-blue flex items-center justify-center text-white shadow-md shadow-brand-blue/20 group-hover:scale-105 transition-transform duration-300">
-            <LucideIcon name="Smile" size={20} />
-          </div>
-          <span className={`font-display font-extrabold text-xl tracking-tight transition-colors duration-300 ${
+          <img 
+            src={logoImg} 
+            alt="Aurus Dental Studio" 
+            className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
+          />
+          <span className={`hidden md:block font-display font-extrabold text-xl tracking-tight transition-colors duration-300 ${
             useDarkText ? 'text-deep-navy' : 'text-white'
           }`}>
             AURUS<span className="text-brand-blue">DENTAL</span>
@@ -97,28 +100,28 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
             })}
           </ul>
 
-          <button
+          <a
             id="nav-cta-btn"
-            onClick={() => handlePageChange('contact')}
+            href="tel:+919820854665"
             className={`group relative inline-flex items-center justify-center px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 overflow-hidden cursor-pointer ${
               useDarkText
                 ? 'bg-brand-blue hover:bg-brand-blue-hover text-white shadow-md shadow-brand-blue/15 hover:shadow-lg'
                 : 'bg-white hover:bg-white/10 text-deep-navy hover:text-white border border-white/20'
             }`}
           >
-            <span className="relative z-10">Get in Touch</span>
-          </button>
+            <span className="relative z-10 flex items-center gap-1.5"><LucideIcon name="Phone" size={14} /> Call now!</span>
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle Button */}
         <div className="flex md:hidden items-center space-x-4">
-          <button
+          <a
             id="mobile-nav-cta-btn"
-            onClick={() => handlePageChange('contact')}
-            className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-brand-blue hover:bg-brand-blue-hover rounded-lg shadow-md cursor-pointer"
+            href="tel:+919820854665"
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-brand-blue hover:bg-brand-blue-hover rounded-lg shadow-md cursor-pointer"
           >
-            Contact
-          </button>
+            <LucideIcon name="Phone" size={12} /> Call now!
+          </a>
           <button
             id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

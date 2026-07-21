@@ -112,49 +112,42 @@ export default function Footer({ setActivePage }: FooterProps) {
           </ul>
         </div>
 
-        {/* Column 3: Contact Info */}
-        <div id="footer-contact-col" className="space-y-6">
-          <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">HQ Office</h3>
+        {/* Column 3: Pune Clinic */}
+        <div id="footer-contact-pune" className="space-y-6">
+          <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">Pune Clinic</h3>
+          <p className="text-xs text-brand-blue font-bold tracking-wider">AURUS DENTAL STUDIO</p>
           <ul className="space-y-4 text-sm">
             <li className="flex items-start space-x-3">
               <LucideIcon name="MapPin" className="text-brand-blue shrink-0 mt-1" size={16} />
-              <span>500 Financial Center, Suite 1200<br />New York, NY 10005</span>
+              <span>Mittal Court, B23, opposite Mahesh Lunch Home, Rasta Peth, Pune, Maharashtra 411002</span>
             </li>
             <li className="flex items-center space-x-3">
               <LucideIcon name="Phone" className="text-brand-blue shrink-0" size={16} />
-              <span>+1 (800) 555-AURUS</span>
+              <span>098208 54665</span>
             </li>
             <li className="flex items-center space-x-3">
-              <LucideIcon name="Mail" className="text-brand-blue shrink-0" size={16} />
-              <span>contact@aurusdental.com</span>
+              <LucideIcon name="Clock" className="text-brand-blue shrink-0" size={16} />
+              <span>Open 24 hours</span>
             </li>
           </ul>
         </div>
 
-        {/* Column 4: Hours of Operation */}
-        <div id="footer-hours-col" className="space-y-6">
-          <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">Working Hours</h3>
-          <ul className="space-y-3 text-sm">
+        {/* Column 4: Mumbai Clinic */}
+        <div id="footer-contact-mumbai" className="space-y-6">
+          <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">Mumbai Clinic</h3>
+          <p className="text-xs text-brand-blue font-bold tracking-wider uppercase">Saifee Smiles Multispeciality</p>
+          <ul className="space-y-4 text-sm">
             <li className="flex items-start space-x-3">
-              <LucideIcon name="Clock" className="text-brand-blue shrink-0 mt-1" size={16} />
-              <div>
-                <p className="font-semibold text-white">Monday - Friday</p>
-                <p className="text-xs text-slate-500">8:00 AM - 6:00 PM EST</p>
-              </div>
+              <LucideIcon name="MapPin" className="text-brand-blue shrink-0 mt-1" size={16} />
+              <span>5C, Shamji Morarji building, Champsi Bhimji Rd, Thakkar Estate, Mazgaon, Mumbai, Maharashtra 400010</span>
             </li>
-            <li className="flex items-start space-x-3">
-              <LucideIcon name="Clock" className="text-brand-blue shrink-0 mt-1" size={16} />
-              <div>
-                <p className="font-semibold text-white">Saturday</p>
-                <p className="text-xs text-slate-500">9:00 AM - 1:00 PM EST</p>
-              </div>
+            <li className="flex items-center space-x-3">
+              <LucideIcon name="Phone" className="text-brand-blue shrink-0" size={16} />
+              <span>098208 54665</span>
             </li>
-            <li className="flex items-start space-x-3">
-              <LucideIcon name="Clock" className="text-slate-600 shrink-0 mt-1" size={16} />
-              <div>
-                <p className="font-semibold text-slate-500">Sunday</p>
-                <p className="text-xs text-slate-600">Closed</p>
-              </div>
+            <li className="flex items-center space-x-3">
+              <LucideIcon name="Clock" className="text-brand-blue shrink-0" size={16} />
+              <span>Open 24 hours</span>
             </li>
           </ul>
         </div>

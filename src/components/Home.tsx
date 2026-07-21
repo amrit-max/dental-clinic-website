@@ -10,6 +10,9 @@ import beforeAfter3 from '../../assets/7.jpg';
 import beforeAfter4 from '../../assets/8.jpg';
 import beforeAfter5 from '../../assets/9.jpg';
 import beforeAfter6 from '../../assets/10.jpg';
+import featureImg1 from '../../assets/b1.png';
+import featureImg2 from '../../assets/b2.png';
+import featureImg3 from '../../assets/2.jpg';
 import { Page } from '../types';
 import { stats, features, services, testimonials } from '../data';
 import LucideIcon from './LucideIcon';
@@ -236,54 +239,43 @@ export default function Home({ setActivePage }: HomeProps) {
             <AnimatedSection
               direction="up"
               delay={0.1}
-              className="md:col-span-7 p-8 sm:p-10 rounded-2xl bg-white border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/20 transition-all duration-500 group relative overflow-hidden flex flex-col justify-between"
+              className="md:col-span-7 rounded-2xl overflow-hidden shadow-premium hover:shadow-premium-lg border border-slate-100 transition-all duration-500 group flex items-center justify-center bg-white"
             >
-              {/* Decorative accent element */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/5 rounded-full blur-2xl group-hover:bg-brand-blue/10 transition-colors" />
-              
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-blue/80 text-white flex items-center justify-center mb-8 shadow-md group-hover:scale-110 transition-transform duration-300">
-                  <LucideIcon name={features[0].iconName} size={28} />
-                </div>
-                <span className="font-mono text-xs font-bold text-accent-amber uppercase tracking-widest block mb-2">Advanced Diagnostics</span>
-                <h3 className="font-display font-black text-2xl sm:text-3xl text-deep-navy mb-4 group-hover:text-brand-blue transition-colors">
-                  {features[0].title}
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
-                  {features[0].description} Our clinic is equipped with the latest 3D imaging and laser dentistry tools, allowing for highly accurate, minimally invasive procedures.
-                </p>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs font-mono font-semibold text-slate-400">STATE-OF-THE-ART CLINIC</span>
-                <span className="w-8 h-1 bg-brand-blue group-hover:w-16 transition-all duration-500 rounded-full" />
-              </div>
+              <img
+                src={featureImg1}
+                alt="State of the art clinic"
+                className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
             </AnimatedSection>
 
             {/* Feature 2 - Spans 5 columns */}
             <AnimatedSection
               direction="up"
               delay={0.2}
-              className="md:col-span-5 p-8 sm:p-10 rounded-2xl bg-white border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/20 transition-all duration-500 group relative overflow-hidden flex flex-col justify-between"
+              className="md:col-span-5 rounded-2xl overflow-hidden shadow-premium hover:shadow-premium-lg border border-slate-100 transition-all duration-500 group relative flex flex-col justify-end min-h-[300px]"
             >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-accent-amber/5 rounded-full blur-xl group-hover:bg-accent-amber/10 transition-colors" />
+              <img
+                src={featureImg2}
+                alt="Relaxing dental environment"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10 pointer-events-none" />
               
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-blue-light to-brand-blue/10 text-brand-blue flex items-center justify-center mb-8 border border-brand-blue/10 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-                  <LucideIcon name={features[1].iconName} size={28} />
+              <div className="relative z-10 p-8 sm:p-10 flex flex-col h-full justify-end">
+                <div>
+                  <span className="font-mono text-xs font-bold text-slate-500 uppercase tracking-widest block mb-2">Comfort First</span>
+                  <h3 className="font-display font-extrabold text-2xl text-deep-navy mb-3 group-hover:text-brand-blue transition-colors">
+                    {features[1].title}
+                  </h3>
+                  <p className="text-sm text-slate-700 leading-relaxed font-medium max-w-sm">
+                    {features[1].description} We offer sedation options and a calming environment to make your visits pleasant and anxiety-free.
+                  </p>
                 </div>
-                <span className="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Comfort First</span>
-                <h3 className="font-display font-extrabold text-2xl text-deep-navy mb-4 group-hover:text-brand-blue transition-colors">
-                  {features[1].title}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  {features[1].description} We offer sedation options and a calming environment to make your visits pleasant and anxiety-free.
-                </p>
-              </div>
 
-              <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs font-mono font-semibold text-slate-400">RELAXING ENVIRONMENT</span>
-                <span className="w-8 h-1 bg-accent-amber group-hover:w-12 transition-all duration-500 rounded-full" />
+                <div className="mt-6 pt-5 border-t border-slate-200/60 flex items-center justify-between">
+                  <span className="text-xs font-mono font-semibold text-slate-500">RELAXING ENVIRONMENT</span>
+                  <span className="w-8 h-1 bg-brand-blue group-hover:w-12 transition-all duration-500 rounded-full" />
+                </div>
               </div>
             </AnimatedSection>
 
@@ -293,8 +285,8 @@ export default function Home({ setActivePage }: HomeProps) {
               delay={0.3}
               className="md:col-span-12 p-8 sm:p-10 rounded-2xl bg-white border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/20 transition-all duration-500 group relative overflow-hidden"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 space-y-4">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <div className="lg:col-span-7 space-y-4 flex flex-col justify-center">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-deep-navy to-slate-800 text-white flex items-center justify-center mb-4 shadow-md">
                     <LucideIcon name={features[2].iconName} size={28} />
                   </div>
@@ -307,15 +299,8 @@ export default function Home({ setActivePage }: HomeProps) {
                   </p>
                 </div>
                 
-                <div className="lg:col-span-5 bg-soft-gray rounded-xl p-6 border border-slate-100 space-y-4 flex flex-col justify-center">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-accent-amber rounded-full animate-ping" />
-                    <span className="text-xs font-mono font-bold text-deep-navy tracking-wider">PATIENT SPOTLIGHT</span>
-                  </div>
-                  <blockquote className="text-xs text-slate-500 italic border-l-2 border-brand-blue pl-3 leading-relaxed">
-                    "The personalized care and attention to detail at Aurus Dental Studio is unmatched. They gave me back my confidence with a perfect smile."
-                  </blockquote>
-                  <p className="text-[11px] font-mono font-semibold text-slate-400 text-right">- Sarah M., Patient</p>
+                <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md relative min-h-[250px] lg:min-h-full border border-slate-100">
+                  <img src={featureImg3} alt="Comprehensive Dental Care" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                 </div>
               </div>
             </AnimatedSection>
@@ -555,22 +540,29 @@ export default function Home({ setActivePage }: HomeProps) {
                 </div>
 
                 {/* Profile */}
-                <div className="flex items-center space-x-4 mt-8 pt-6 border-t border-slate-100 relative z-10">
-                  <img
-                    src={test.image}
-                    alt={test.name}
-                    className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white group-hover:scale-105 transition-transform"
-                  />
+                <div className="flex items-center mt-8 pt-6 border-t border-slate-100 relative z-10">
                   <div>
-                    <h4 className="font-display font-bold text-sm text-deep-navy">{test.name}</h4>
-                    <p className="text-xs text-slate-500 font-medium">
-                      {test.role}, <span className="text-brand-blue font-semibold">{test.company}</span>
+                    <h4 className="font-display font-bold text-sm text-deep-navy capitalize">{test.name}</h4>
+                    <p className="text-xs text-slate-500 font-medium mt-0.5">
+                      {test.role}
                     </p>
                   </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+          
+          <AnimatedSection direction="up" delay={0.4} className="mt-12 text-center">
+            <a 
+              href="https://www.google.com/search?sca_esv=9d5980b468b581ce&hl=en-IN&sxsrf=APpeQnt82_BpSIU0QIUwf7I4ChokyavBwA:1784628230709&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_20SvHCjBOlDlvqHQtsde6dPR6LMQqHoNBoqBuuH3u2biHVOWIPmZKFhCgF7VeZ3xczyVnXI_qhaJrCdEkmZK_ZGauveBvtknA69Na_pG_7E4AJ0saUSEJoDkJYhLCGieE8Q0_Y%3D&q=Aurus+Dental+Studio+by+Dr+Abbas+Unwala+Reviews&sa=X&ved=2ahUKEwiGif2dwuOVAxWuzjgGHSrLAg8Q0bkNegQIHxAF&biw=1707&bih=780&dpr=1.13"
+              target="_blank" 
+              rel="noreferrer" 
+              className="inline-flex items-center justify-center space-x-2 font-bold text-brand-blue hover:text-brand-blue-hover hover:underline transition-all cursor-pointer"
+            >
+              <span>For more reviews click here</span>
+              <LucideIcon name="ExternalLink" size={16} />
+            </a>
+          </AnimatedSection>
         </div>
       </section>
 

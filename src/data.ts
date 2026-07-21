@@ -28,61 +28,141 @@ export const features: FeatureItem[] = [
   }
 ];
 
+import s1 from '../assets/1.jpg';
+import s2 from '../assets/2.jpg';
+import s3 from '../assets/3.jpg';
+import s4 from '../assets/4.jpg';
+import s5 from '../assets/5.jpg';
+import s6 from '../assets/6.jpg';
+import s7 from '../assets/7.jpg';
+import s8 from '../assets/8.jpg';
+import s9 from '../assets/9.jpg';
+
 export const services: ServiceItem[] = [
   {
     id: 'srv-1',
-    title: 'Cosmetic Dentistry',
-    description: 'Transform your smile with our premium cosmetic procedures including veneers, teeth whitening, and complete smile makeovers.',
+    title: 'Digital Smile Designing',
+    description: 'Transform your smile precisely with custom-crafted porcelain veneers and laminates using advanced digital smile design technology.',
     iconName: 'Smile',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
-    tag: 'Aesthetics',
+    image: s1,
+    tag: 'Cosmetic',
     details: [
+      'Digital Smile Preview',
       'Porcelain Veneers',
-      'Professional Teeth Whitening',
-      'Invisalign Clear Aligners',
-      'Smile Makeovers'
+      'Composite Laminates',
+      'Aesthetic Consultations'
     ]
   },
   {
     id: 'srv-2',
-    title: 'Restorative Care',
-    description: 'Restore the function and appearance of your teeth with advanced implants, crowns, and bridges that look completely natural.',
-    iconName: 'Settings',
-    image: 'https://images.unsplash.com/photo-1598256989800-fea992040c30?auto=format&fit=crop&w=800&q=80',
-    tag: 'Restorative',
+    title: 'Laser Dentistry',
+    description: 'Experience minimally invasive, virtually painless dental treatments using state-of-the-art laser technology for faster healing and precision.',
+    iconName: 'Zap',
+    image: s2,
+    tag: 'Advanced',
     details: [
-      'Dental Implants',
-      'Ceramic Crowns',
-      'Dental Bridges',
-      'Full Mouth Reconstruction'
+      'Gum Contouring',
+      'Cavity Preparation',
+      'Lesion Removal',
+      'Faster Recovery'
     ]
   },
   {
     id: 'srv-3',
-    title: 'Preventive Dentistry',
-    description: 'Maintain optimal oral health through comprehensive exams, professional cleanings, and early detection of potential issues.',
-    iconName: 'CheckCircle2',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80',
-    tag: 'Prevention',
+    title: 'Gum Surgery',
+    description: 'Expert periodontal care and advanced gum surgeries to treat disease, restore optimal oral health, and enhance the foundation of your smile.',
+    iconName: 'Activity',
+    image: s3,
+    tag: 'Periodontal',
     details: [
-      'Comprehensive Exams',
-      'Professional Cleanings',
-      'Oral Cancer Screenings',
-      'Fluoride Treatments'
+      'Grafting Procedures',
+      'Pocket Reduction',
+      'Crown Lengthening',
+      'Periodontal Therapy'
     ]
   },
   {
     id: 'srv-4',
-    title: 'Emergency Services',
-    description: 'Immediate care for dental emergencies. We prioritize urgent cases to relieve pain and save damaged teeth quickly.',
-    iconName: 'Clock',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
-    tag: 'Urgent Care',
+    title: 'Clear Aligners & Braces',
+    description: 'Straighten your teeth discreetly and comfortably with custom clear aligners or traditional orthodontic braces for a perfectly aligned smile.',
+    iconName: 'Sparkles',
+    image: s4,
+    tag: 'Orthodontics',
     details: [
-      'Severe Toothache Relief',
-      'Chipped or Broken Teeth',
-      'Lost Crowns or Fillings',
-      'Abscess Treatment'
+      'Invisalign Therapy',
+      'Ceramic Braces',
+      'Custom Retainers',
+      'Bite Correction'
+    ]
+  },
+  {
+    id: 'srv-5',
+    title: 'Crowns and Bridge',
+    description: 'Restore damaged or missing teeth with durable, natural-looking ceramic crowns and custom bridges engineered for long-lasting function.',
+    iconName: 'Layers',
+    image: s5,
+    tag: 'Restorative',
+    details: [
+      'Zirconia Crowns',
+      'Fixed Bridges',
+      'Implant Crowns',
+      'Custom Shade Matching'
+    ]
+  },
+  {
+    id: 'srv-6',
+    title: 'Teeth Whitening & Gum Depigmentation',
+    description: 'Brighten your smile dramatically with professional teeth whitening and specialized gum depigmentation for a radiant, even-toned appearance.',
+    iconName: 'Sun',
+    image: s6,
+    tag: 'Aesthetics',
+    details: [
+      'In-Office Whitening',
+      'Take-Home Kits',
+      'Laser Gum Bleaching',
+      'Stain Removal'
+    ]
+  },
+  {
+    id: 'srv-7',
+    title: 'Painless Extractions',
+    description: 'Safe, comfortable, and stress-free tooth extractions performed with advanced anesthesia techniques to ensure a completely painless experience.',
+    iconName: 'HeartPulse',
+    image: s7,
+    tag: 'Surgical',
+    details: [
+      'Simple Extractions',
+      'Surgical Extractions',
+      'Local Anesthesia',
+      'Post-Op Care'
+    ]
+  },
+  {
+    id: 'srv-8',
+    title: 'Wisdom Teeth Removal',
+    description: 'Expert surgical extraction of impacted or problematic wisdom teeth, focusing on minimizing discomfort and accelerating your recovery.',
+    iconName: 'ShieldAlert',
+    image: s8,
+    tag: 'Surgical',
+    details: [
+      'Impacted Teeth',
+      'Preventive Removal',
+      'Sedation Options',
+      'Surgical Expertise'
+    ]
+  },
+  {
+    id: 'srv-9',
+    title: 'Teeth Cleaning & Polishing',
+    description: 'Maintain flawless oral hygiene and prevent disease with comprehensive professional scaling, root planing, and enamel polishing.',
+    iconName: 'Droplets',
+    image: s9,
+    tag: 'Preventive',
+    details: [
+      'Ultrasonic Scaling',
+      'Prophylaxis',
+      'Plaque Removal',
+      'Fluoride Application'
     ]
   }
 ];
@@ -121,29 +201,29 @@ export const teamMembers: TeamMember[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 'test-1',
-    name: 'Sophia Martinez',
+    name: 'qaidzoher tambawala',
     role: 'Patient',
-    company: 'Cosmetic Procedure',
-    quote: 'The team at Aurus transformed my smile completely! The veneers look incredibly natural, and the entire process was pain-free. I can\'t stop smiling now.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80',
+    company: '',
+    quote: 'You are in safe hands once you reach this dentist. Dr. Abbas not just does a brilliant job as an endodontist he also engages with the patient and talks them thru the whole procedure. Be it a root canal or be it an implant.',
+    image: '',
     rating: 5
   },
   {
     id: 'test-2',
-    name: 'Liam Sterling',
+    name: 'sneha morye',
     role: 'Patient',
-    company: 'Implant Patient',
-    quote: 'I was extremely nervous about getting an implant, but Dr. Jenkins explained everything clearly and made sure I was comfortable throughout the procedure.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80',
+    company: '',
+    quote: 'I had my wisdom tooth extracted by Dr. Abbas and it was a very smooth and painless experience. I had removed another wisdom tooth elsewhere before, which was quite painful, so I was nervous — but Dr. Abbas made the entire process easy.',
+    image: '',
     rating: 5
   },
   {
     id: 'test-3',
-    name: 'Michael Thorne',
+    name: 'Kania Wadiwala',
     role: 'Patient',
-    company: 'Routine Care',
-    quote: 'The most thorough and professional dental cleaning I\'ve ever had. The staff is so welcoming and the clinic feels more like a spa than a dentist\'s office.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80',
+    company: '',
+    quote: 'Great experience at Dr. Abbas’s dental studio. Professional service, clean setup and very friendly staff. Dr. Abbas is knowledgeable and makes sure patients are comfortable throughout the treatment.',
+    image: '',
     rating: 5
   }
 ];
