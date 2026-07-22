@@ -112,7 +112,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                     <div className="space-y-4">
                       <div className="flex items-center space-x-4">
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-blue-light to-brand-blue/10 text-brand-blue flex items-center justify-center border border-brand-blue/10 shadow-sm shrink-0">
-                          <LucideIcon name={service.iconName} size={22} />
+                          <LucideIcon name="Smile" size={22} />
                         </div>
                         <h3 className="font-display font-black text-2xl text-deep-navy group-hover:text-brand-blue transition-colors duration-300">
                           {service.title}

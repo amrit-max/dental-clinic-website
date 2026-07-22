@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Page } from '../types';
 import LucideIcon from './LucideIcon';
 import AnimatedSection from './AnimatedSection';
+import profileImg from '../../assets/profile.webp';
+import logoImg from '../../assets/logo.webp';
 
 interface AboutProps {
   setActivePage: (page: Page) => void;
@@ -69,8 +71,8 @@ export default function About({ setActivePage }: AboutProps) {
             <div className="lg:col-span-5 relative">
               <AnimatedSection direction="left" className="editorial-mask-1 overflow-hidden shadow-premium-lg border border-slate-100 relative z-10 group duotone-blue-tint">
                 <img
-                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
-                  alt="Modern Dental Clinic"
+                  src={profileImg}
+                  alt="Dr. Abbas Saifuddin Unwala"
                   className="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </AnimatedSection>
@@ -222,11 +224,11 @@ export default function About({ setActivePage }: AboutProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             <div className="lg:col-span-5 relative">
-              <AnimatedSection direction="right" className="editorial-mask-2 overflow-hidden shadow-premium-lg border border-slate-100 group">
+              <AnimatedSection direction="right" className="editorial-mask-2 overflow-hidden shadow-premium-lg border border-slate-100 group bg-white">
                 <img
-                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
-                  alt="Dental Consultation"
-                  className="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  src={logoImg}
+                  alt="Aurus Dental Studio Logo"
+                  className="w-full h-[450px] object-contain p-12 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </AnimatedSection>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-blue/10 rounded-full blur-xl animate-pulse" />

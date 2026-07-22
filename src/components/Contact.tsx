@@ -62,18 +62,40 @@ export default function Contact({ setActivePage }: ContactProps) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     setIsSubmitting(true);
     
-    // Simulate API request to high-fidelity server endpoint (mock logic)
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/dentalaurus@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        alert("Failed to submit form. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("An error occurred while sending the message. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    }, 1500);
+    }
   };
 
   return (
