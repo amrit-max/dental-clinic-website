@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Page, ServiceItem } from '../types';
-import { services, processSteps } from '../data';
+import { services, processSteps, faqs } from '../data';
 import LucideIcon from './LucideIcon';
 import AnimatedSection from './AnimatedSection';
 import SectionHeading from './SectionHeading';
@@ -12,56 +12,16 @@ interface ServicesProps {
 
 export default function Services({ setActivePage }: ServicesProps) {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
+
+  const toggleFaq = (id: string) => {
+    setOpenFaq(prev => prev === id ? null : id);
+  };
 
   const handleNavigate = (page: Page) => {
     setActivePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const pricingTiers = [
-    {
-      name: 'Diagnostic & Audit',
-      price: '$4,500',
-      period: 'flat fee',
-      description: 'A comprehensive operational and technical diagnostic blueprinting your exact growth opportunities.',
-      features: [
-        'Complete systems architecture audit',
-        'Friction points & bottleneck mapping',
-        '10-point regulatory compliance check',
-        'Custom 24-month scaling roadmap'
-      ],
-      popular: false,
-      btnText: 'Request Audit'
-    },
-    {
-      name: 'Strategic Acceleration',
-      price: '$8,500',
-      period: 'per month',
-      description: 'Active partner advisory paired with technical co-implementation to scale infrastructure and optimize margins.',
-      features: [
-        'Dedicated senior partner advisory',
-        'Active workflow co-implementation',
-        'AI pipeline & cloud optimization',
-        'Bi-weekly metrics & ROI auditing'
-      ],
-      popular: true,
-      btnText: 'Initiate Acceleration'
-    },
-    {
-      name: 'Patient Transformation',
-      price: 'Custom',
-      period: 'engagement based',
-      description: 'A complete custom operational redesign and full-stack software workflow overhaul for global firms.',
-      features: [
-        'Complete organizational restructuring',
-        'Custom multi-platform automation',
-        '24/7 priority support & on-call advisory',
-        'Full regulatory compliance backing'
-      ],
-      popular: false,
-      btnText: 'Inquire for Bespoke Pricing'
-    }
-  ];
 
   return (
     <div id="services-page-container" className="overflow-x-hidden bg-white">
@@ -76,6 +36,7 @@ export default function Services({ setActivePage }: ServicesProps) {
               badge="Active Blueprints"
               watermark="BLUEPRINTS"
               accentWord="Capabilities"
+              level="h1"
               centered
             />
           </AnimatedSection>
@@ -101,7 +62,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-contain bg-slate-50 group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     <span className="absolute top-4 left-4 bg-deep-navy/90 backdrop-blur-md px-3.5 py-1.5 text-[10px] font-mono font-bold text-white tracking-widest rounded-lg shadow-md z-20">
                       {service.tag}
@@ -118,7 +79,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                           {service.title}
                         </h3>
                       </div>
-                      <p className="text-sm sm:text-base text-slate-500 leading-relaxed font-sans font-light">
+                      <p className="text-sm sm:text-base text-slate-500 leading-relaxed font-sans font-light line-clamp-3">
                         {service.description}
                       </p>
                     </div>
@@ -165,7 +126,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                 <img
                   src={selectedService.image}
                   alt={selectedService.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-slate-50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-deep-navy/50 to-transparent" />
                 <button
@@ -292,6 +253,61 @@ export default function Services({ setActivePage }: ServicesProps) {
         </div>
       </section>
 
+      {/* 4. FAQ SECTION */}
+      <section id="services-faq" className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection direction="up" className="text-center mb-16">
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full mb-3 bg-brand-blue-light text-brand-blue border border-brand-blue/10 font-mono">
+              <span className="w-1.5 h-1.5 bg-accent-amber rounded-full animate-pulse" />
+              FAQ
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-black text-deep-navy tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-sm sm:text-base text-slate-500 leading-relaxed font-sans font-light mt-3">
+              Common patient queries about dental treatments, clear aligners, implants, and costs in Pune and Mumbai.
+            </p>
+          </AnimatedSection>
+
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === faq.id;
+              return (
+                <AnimatedSection
+                  key={faq.id}
+                  direction="up"
+                  delay={0.05 * idx}
+                  className="border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 bg-white"
+                >
+                  <button
+                    id={`faq-btn-${faq.id}`}
+                    onClick={() => toggleFaq(faq.id)}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left font-display font-bold text-base text-deep-navy hover:text-brand-blue transition-colors cursor-pointer focus:outline-none"
+                  >
+                    <span>{faq.question}</span>
+                    <span className={`w-8 h-8 rounded-lg bg-soft-gray flex items-center justify-center shrink-0 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180 text-brand-blue' : ''}`}>
+                      <LucideIcon name="ChevronDown" size={16} />
+                    </span>
+                  </button>
+
+                  <div
+                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                      isOpen ? 'max-h-[500px] border-t border-slate-50' : 'max-h-0'
+                    }`}
+                  >
+                    <div className="p-6 text-sm sm:text-base text-slate-600 leading-relaxed font-sans font-light bg-slate-50/50">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* 6. CTA BANNER */}
       <section id="services-cta-banner" className="py-24 bg-deep-navy text-center relative overflow-hidden bg-dot-pattern-light">
         {/* Soft radial glow backgrounds */}
@@ -301,19 +317,19 @@ export default function Services({ setActivePage }: ServicesProps) {
           
           <AnimatedSection direction="up">
             <span className="inline-flex items-center gap-1 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-accent-amber font-semibold uppercase tracking-widest">
-              <span>Aurus Executive Group</span>
+              <span>Aurus Dental Studio</span>
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mt-4">
-              Let’s Align on Your <br />
+              Ready to Transform <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber">
-                Patient Objectives
+                Your Smile?
               </span>
             </h2>
           </AnimatedSection>
 
           <AnimatedSection direction="up" delay={0.1}>
             <p className="text-slate-300 leading-relaxed max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light">
-              Unlock sustainable operational leverage. Fill out our contact intake to schedule a detailed care alignment consultation.
+              Experience advanced, painless dental care in a premium, stress-free environment. Fill out our contact form to schedule your consultation with Dr. Abbas Unwala.
             </p>
           </AnimatedSection>
 
@@ -325,7 +341,7 @@ export default function Services({ setActivePage }: ServicesProps) {
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
               <span className="relative z-10 flex items-center">
-                Schedule Initial Diagnostic
+                Book an Appointment
                 <LucideIcon name="ArrowRight" className="ml-2 group-hover:translate-x-1.5 transition-transform duration-300" size={18} />
               </span>
             </button>

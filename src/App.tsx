@@ -9,29 +9,42 @@ import Contact from './components/Contact';
 import { motion, AnimatePresence } from 'motion/react';
 import WhatsAppButton from './components/WhatsAppButton';
 
-export default function App() {
-  const [activePage, setActivePage] = useState<Page>('home');
-
-  // Synchronize hash routing for high-fidelity back/forward and state reload support
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') as Page;
+export default function App({ initialPage }: { initialPage?: Page } = {}) {
+  const [activePage, setActivePage] = useState<Page>(() => {
+    if (initialPage) return initialPage;
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname.replace(/^\/|\/$/g, '') as Page || 'home';
       const validPages: Page[] = ['home', 'about', 'services', 'contact'];
-      if (validPages.includes(hash)) {
-        setActivePage(hash);
+      return validPages.includes(path) ? path : 'home';
+    }
+    return 'home';
+  });
+
+  // Synchronize path routing for clean URLs, search engine indexability, and back/forward browser support
+  useEffect(() => {
+    const handleLocationChange = () => {
+      const path = window.location.pathname.replace(/^\/|\/$/g, '') as Page || 'home';
+      const validPages: Page[] = ['home', 'about', 'services', 'contact'];
+      if (validPages.includes(path)) {
+        setActivePage(path);
+      } else {
+        setActivePage('home');
       }
     };
 
     // Run on initial load
-    handleHashChange();
+    handleLocationChange();
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleLocationChange);
+    return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
 
   const handlePageChange = (page: Page) => {
     setActivePage(page);
-    window.location.hash = page;
+    const newPath = page === 'home' ? '/' : `/${page}`;
+    if (window.location.pathname !== newPath) {
+      window.history.pushState(null, '', newPath);
+    }
   };
 
   const renderPage = () => {

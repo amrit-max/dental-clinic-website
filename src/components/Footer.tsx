@@ -12,6 +12,11 @@ export default function Footer({ setActivePage }: FooterProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleLinkClick = (e: React.MouseEvent, page: Page) => {
+    e.preventDefault();
+    handlePageChange(page);
+  };
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -33,34 +38,14 @@ export default function Footer({ setActivePage }: FooterProps) {
           </p>
           <div className="flex items-center space-x-4">
             <a
-              id="footer-social-linkedin"
-              href="https://linkedin.com"
+              id="footer-social-instagram"
+              href="https://www.instagram.com/its_that_dentist/"
               target="_blank"
               rel="noreferrer"
               className="w-9 h-9 rounded-lg bg-deep-navy-light text-slate-400 hover:text-white hover:bg-brand-blue flex items-center justify-center transition-colors duration-300"
-              aria-label="LinkedIn"
+              aria-label="Instagram"
             >
-              <LucideIcon name="Linkedin" size={18} />
-            </a>
-            <a
-              id="footer-social-twitter"
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="w-9 h-9 rounded-lg bg-deep-navy-light text-slate-400 hover:text-white hover:bg-brand-blue flex items-center justify-center transition-colors duration-300"
-              aria-label="Twitter"
-            >
-              <LucideIcon name="Twitter" size={18} />
-            </a>
-            <a
-              id="footer-social-facebook"
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              className="w-9 h-9 rounded-lg bg-deep-navy-light text-slate-400 hover:text-white hover:bg-brand-blue flex items-center justify-center transition-colors duration-300"
-              aria-label="Facebook"
-            >
-              <LucideIcon name="Facebook" size={18} />
+              <LucideIcon name="Instagram" size={18} />
             </a>
           </div>
         </div>
@@ -70,44 +55,48 @@ export default function Footer({ setActivePage }: FooterProps) {
           <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">Quick Navigation</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <button
+              <a
                 id="footer-nav-home"
-                onClick={() => handlePageChange('home')}
+                href="/"
+                onClick={(e) => handleLinkClick(e, 'home')}
                 className="hover:text-white transition-colors duration-300 flex items-center space-x-1 cursor-pointer focus:outline-none"
               >
                 <LucideIcon name="ChevronRight" size={12} className="text-brand-blue" />
                 <span>Home Page</span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
+              <a
                 id="footer-nav-about"
-                onClick={() => handlePageChange('about')}
+                href="/about"
+                onClick={(e) => handleLinkClick(e, 'about')}
                 className="hover:text-white transition-colors duration-300 flex items-center space-x-1 cursor-pointer focus:outline-none"
               >
                 <LucideIcon name="ChevronRight" size={12} className="text-brand-blue" />
                 <span>About Our Firm</span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
+              <a
                 id="footer-nav-services"
-                onClick={() => handlePageChange('services')}
+                href="/services"
+                onClick={(e) => handleLinkClick(e, 'services')}
                 className="hover:text-white transition-colors duration-300 flex items-center space-x-1 cursor-pointer focus:outline-none"
               >
                 <LucideIcon name="ChevronRight" size={12} className="text-brand-blue" />
                 <span>Strategic Services</span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
+              <a
                 id="footer-nav-contact"
-                onClick={() => handlePageChange('contact')}
+                href="/contact"
+                onClick={(e) => handleLinkClick(e, 'contact')}
                 className="hover:text-white transition-colors duration-300 flex items-center space-x-1 cursor-pointer focus:outline-none"
               >
                 <LucideIcon name="ChevronRight" size={12} className="text-brand-blue" />
                 <span>Contact Channels</span>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -115,7 +104,7 @@ export default function Footer({ setActivePage }: FooterProps) {
         {/* Column 3: Pune Clinic */}
         <div id="footer-contact-pune" className="space-y-6">
           <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">Pune Clinic</h3>
-          <p className="text-xs text-brand-blue font-bold tracking-wider">AURUS DENTAL STUDIO</p>
+          <p className="text-xs text-brand-blue font-bold tracking-wider">Aurus Dental Studio</p>
           <ul className="space-y-4 text-sm">
             <li className="flex items-start space-x-3">
               <LucideIcon name="MapPin" className="text-brand-blue shrink-0 mt-1" size={16} />
@@ -123,7 +112,7 @@ export default function Footer({ setActivePage }: FooterProps) {
             </li>
             <li className="flex items-center space-x-3">
               <LucideIcon name="Phone" className="text-brand-blue shrink-0" size={16} />
-              <span>098208 54665</span>
+              <span>+91 98208 54665</span>
             </li>
             <li className="flex items-center space-x-3">
               <LucideIcon name="Clock" className="text-brand-blue shrink-0" size={16} />
@@ -135,7 +124,7 @@ export default function Footer({ setActivePage }: FooterProps) {
         {/* Column 4: Mumbai Clinic */}
         <div id="footer-contact-mumbai" className="space-y-6">
           <h3 className="font-display font-bold text-white tracking-wide text-sm uppercase">Mumbai Clinic</h3>
-          <p className="text-xs text-brand-blue font-bold tracking-wider uppercase">Saifee Smiles Multispeciality</p>
+          <p className="text-xs text-brand-blue font-bold tracking-wider uppercase">Saifee Smiles Multispeciality Dental Clinic</p>
           <ul className="space-y-4 text-sm">
             <li className="flex items-start space-x-3">
               <LucideIcon name="MapPin" className="text-brand-blue shrink-0 mt-1" size={16} />
@@ -143,7 +132,7 @@ export default function Footer({ setActivePage }: FooterProps) {
             </li>
             <li className="flex items-center space-x-3">
               <LucideIcon name="Phone" className="text-brand-blue shrink-0" size={16} />
-              <span>098208 54665</span>
+              <span>+91 98208 54665</span>
             </li>
             <li className="flex items-center space-x-3">
               <LucideIcon name="Clock" className="text-brand-blue shrink-0" size={16} />

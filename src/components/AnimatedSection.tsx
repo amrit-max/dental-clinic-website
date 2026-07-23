@@ -21,7 +21,7 @@ export default function AnimatedSection({
     if (direction === 'none') {
       return {
         hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 0.6, delay, ease: 'easeOut' } }
+        visible: { opacity: 1, transition: { duration: 0.45, delay, ease: 'easeOut' } }
       };
     }
 
@@ -38,7 +38,7 @@ export default function AnimatedSection({
         opacity: 1,
         x: 0,
         y: 0,
-        transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] } // Custom elegant easeOutExpo curve
+        transition: { duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] } // Custom elegant easeOutExpo curve
       }
     };
   };
@@ -48,7 +48,7 @@ export default function AnimatedSection({
       id={id}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, margin: '-20px' }}
       variants={getVariants()}
       className={className}
     >

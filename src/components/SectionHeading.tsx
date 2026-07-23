@@ -9,6 +9,7 @@ interface SectionHeadingProps {
   inverse?: boolean;
   watermark?: string;
   accentWord?: string; // Word in title to emphasize or highlight
+  level?: 'h1' | 'h2';
 }
 
 export default function SectionHeading({
@@ -19,33 +20,36 @@ export default function SectionHeading({
   centered = false,
   inverse = false,
   watermark,
-  accentWord
+  accentWord,
+  level = 'h2'
 }: SectionHeadingProps) {
   // If we have an accentWord, we can highlight it. Otherwise we display the title normally.
   const renderTitle = () => {
+    const Tag = level;
+    const baseClass = `relative z-10 font-display text-3xl sm:text-4xl md:text-5xl tracking-tight mb-4 ${
+      inverse ? 'text-white' : 'text-deep-navy'
+    }`;
+    const fontClass = accentWord && title.includes(accentWord) ? 'font-extrabold' : 'font-bold';
+
     if (!accentWord || !title.includes(accentWord)) {
       return (
-        <h2 className={`relative z-10 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 ${
-          inverse ? 'text-white' : 'text-deep-navy'
-        }`}>
+        <Tag className={`${baseClass} ${fontClass}`}>
           {title}
           <span className="inline-block ml-1 w-2.5 h-2.5 bg-accent-amber rounded-full animate-pulse" />
-        </h2>
+        </Tag>
       );
     }
 
     const parts = title.split(accentWord);
     return (
-      <h2 className={`relative z-10 font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 ${
-        inverse ? 'text-white' : 'text-deep-navy'
-      }`}>
+      <Tag className={`${baseClass} ${fontClass}`}>
         {parts[0]}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-amber underline decoration-accent-amber/40 decoration-wavy decoration-2">
           {accentWord}
         </span>
         {parts[1]}
         <span className="inline-block ml-1 w-2.5 h-2.5 bg-accent-amber rounded-full" />
-      </h2>
+      </Tag>
     );
   };
 

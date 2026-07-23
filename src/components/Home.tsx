@@ -69,10 +69,10 @@ export default function Home({ setActivePage }: HomeProps) {
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.2}>
-                <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] mb-1">
-                  Crafting <span className="italic font-light text-slate-300">Perfect</span> Smiles With{' '}
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber">
-                    Expert Precision
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-1">
+                  Best Dental Clinic in Pune & Mumbai <br />
+                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber text-3xl sm:text-4xl lg:text-5xl">
+                    Aurus Dental Studio
                     <span className="absolute left-0 bottom-1 lg:bottom-2 w-full h-[3px] bg-gradient-to-r from-brand-blue to-accent-amber rounded-full" />
                   </span>
                 </h1>
@@ -117,7 +117,7 @@ export default function Home({ setActivePage }: HomeProps) {
                 <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(8,145,178,0.25)] group z-10 border-4 border-deep-navy">
                   <img 
                     src={profileImg} 
-                    alt="Dr Profile" 
+                    alt="Dr. Abbas Saifuddin Unwala - Founder and Chief Dentist at Aurus Dental Studio" 
                     className="w-full h-full object-cover object-center scale-[1.15] group-hover:scale-[1.2] transition-transform duration-700 ease-out" 
                   />
                   {/* Clean HTML Nameplate Overlay - positioned at absolute bottom to hide baked-in text */}
@@ -243,7 +243,8 @@ export default function Home({ setActivePage }: HomeProps) {
             >
               <img
                 src={featureImg1}
-                alt="State of the art clinic"
+                alt="State-of-the-art clinic equipment at Aurus Dental Studio"
+                loading="lazy"
                 className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </AnimatedSection>
@@ -256,7 +257,8 @@ export default function Home({ setActivePage }: HomeProps) {
             >
               <img
                 src={featureImg2}
-                alt="Relaxing dental environment"
+                alt="Modern, comforting, and anxiety-free patient dental lounge"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10 pointer-events-none" />
@@ -300,7 +302,7 @@ export default function Home({ setActivePage }: HomeProps) {
                 </div>
                 
                 <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md relative min-h-[250px] lg:min-h-full border border-slate-100">
-                  <img src={featureImg3} alt="Comprehensive Dental Care" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                  <img src={featureImg3} alt="Dr. Abbas Unwala performing comprehensive and painless dental care" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                 </div>
               </div>
             </AnimatedSection>
@@ -321,7 +323,8 @@ export default function Home({ setActivePage }: HomeProps) {
             >
               <img
                 src={galleryImg1}
-                alt="Patient consultation"
+                alt="Patient consultation at Aurus Dental Studio Pune clinic"
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent flex flex-col justify-end p-8 z-10">
@@ -338,7 +341,8 @@ export default function Home({ setActivePage }: HomeProps) {
             >
               <img
                 src={galleryImg2}
-                alt="Dental procedure"
+                alt="Dr. Abbas Unwala performing high-precision dental procedures"
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent flex flex-col justify-end p-8 z-10">
@@ -355,7 +359,8 @@ export default function Home({ setActivePage }: HomeProps) {
             >
               <img
                 src={galleryImg3}
-                alt="Patient smiling"
+                alt="Happy patient showing perfect teeth alignment results"
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent flex flex-col justify-end p-8 z-10">
@@ -406,7 +411,8 @@ export default function Home({ setActivePage }: HomeProps) {
               >
                 <img
                   src={img}
-                  alt={`Before and After Transformation ${idx + 1}`}
+                  alt={`Before and After Smile Transformation Case ${idx + 1}`}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -434,6 +440,7 @@ export default function Home({ setActivePage }: HomeProps) {
               <div className="absolute inset-0 bg-brand-blue/10 group-hover:opacity-0 transition-opacity duration-500 z-10 mix-blend-multiply" />
               <video
                 src={clinicVideo}
+                title="Overview of Aurus Dental Studio modern clinic setup and advanced equipment"
                 autoPlay
                 loop
                 muted

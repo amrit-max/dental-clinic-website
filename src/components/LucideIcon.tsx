@@ -29,6 +29,7 @@ import {
   Facebook,
   Twitter,
   Linkedin,
+  Instagram,
   ArrowUpRight,
   CheckCircle2,
   ThumbsUp,
@@ -118,6 +119,8 @@ export default function LucideIcon({ name, className = '', size }: LucideIconPro
       return <ChevronDown {...iconProps} />;
     case 'Smile':
       return <Smile {...iconProps} />;
+    case 'Instagram':
+      return <Instagram {...iconProps} />;
     default:
       return <HelpCircle {...iconProps} />;
   }

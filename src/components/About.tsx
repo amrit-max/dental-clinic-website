@@ -47,9 +47,9 @@ export default function About({ setActivePage }: AboutProps) {
                   <span className="w-1.5 h-1.5 bg-accent-amber rounded-full" />
                   OUR JOURNEY
                 </span>
-                <h2 className="font-display text-4xl sm:text-5xl font-black text-deep-navy tracking-tight leading-tight">
+                <h1 className="font-display text-4xl sm:text-5xl font-black text-deep-navy tracking-tight leading-tight">
                   Built on Precision, Driven by Care
-                </h2>
+                </h1>
               </AnimatedSection>
 
               <div className="space-y-6 text-slate-600 leading-relaxed font-light text-base sm:text-lg">

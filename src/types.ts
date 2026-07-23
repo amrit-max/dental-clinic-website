@@ -63,3 +63,9 @@ export interface ContactFormErrors {
   subject?: string;
   message?: string;
 }
+
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+}

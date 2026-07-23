@@ -38,6 +38,11 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleLinkClick = (e: React.MouseEvent, page: Page) => {
+    e.preventDefault();
+    handlePageChange(page);
+  };
+
   const useDarkText = isScrolled || activePage !== 'home';
 
   return (
@@ -51,14 +56,15 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Brand Logo */}
-        <button
+        <a
           id="navbar-logo-btn"
-          onClick={() => handlePageChange('home')}
-          className="flex items-center space-x-3 focus:outline-none group cursor-pointer"
+          href="/"
+          onClick={(e) => handleLinkClick(e, 'home')}
+          className="flex items-center space-x-3 focus:outline-none group cursor-pointer animate-fade-in"
         >
           <img 
             src={logoImg} 
-            alt="Aurus Dental Studio" 
+            alt="Aurus Dental Studio - Pune and Mumbai Premium Dental Practice" 
             className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
           />
           <span className={`hidden md:block font-display font-extrabold text-xl tracking-tight transition-colors duration-300 ${
@@ -66,7 +72,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
           }`}>
             AURUS<span className="text-brand-blue">DENTAL</span>
           </span>
-        </button>
+        </a>
 
         {/* Desktop Navigation */}
         <nav id="desktop-nav" className="hidden md:flex items-center space-x-10">
@@ -75,9 +81,10 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
               const isActive = activePage === item.value;
               return (
                 <li key={item.value}>
-                  <button
+                  <a
                     id={`nav-link-${item.value}`}
-                    onClick={() => handlePageChange(item.value)}
+                    href={item.value === 'home' ? '/' : `/${item.value}`}
+                    onClick={(e) => handleLinkClick(e, item.value)}
                     className={`relative py-2 text-sm font-bold tracking-widest uppercase transition-colors duration-300 cursor-pointer focus:outline-none ${
                       isActive 
                         ? (useDarkText ? 'text-brand-blue' : 'text-accent-amber') 
@@ -94,7 +101,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
                     )}
-                  </button>
+                  </a>
                 </li>
               );
             })}
@@ -150,10 +157,11 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
               {navItems.map((item) => {
                 const isActive = activePage === item.value;
                 return (
-                  <button
+                  <a
                     id={`mobile-nav-link-${item.value}`}
                     key={item.value}
-                    onClick={() => handlePageChange(item.value)}
+                    href={item.value === 'home' ? '/' : `/${item.value}`}
+                    onClick={(e) => handleLinkClick(e, item.value)}
                     className={`flex items-center justify-between w-full py-3.5 px-4 rounded-xl text-left font-bold text-sm uppercase tracking-wider transition-all duration-300 ${
                       isActive
                         ? 'bg-brand-blue-light text-brand-blue'
@@ -168,7 +176,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
                         isActive ? 'text-brand-blue translate-x-1' : 'text-slate-400'
                       }`}
                     />
-                  </button>
+                  </a>
                 );
               })}
             </nav>
