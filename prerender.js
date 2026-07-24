@@ -34,10 +34,10 @@ const routes = [
       "@graph": [
         {
           "@type": "Dentist",
-          "@id": "https://aurusdentalstudio.com/#dentist-pune",
+          "@id": "https://drabbasunwala.com/#dentist-pune",
           "name": "Aurus Dental Studio - Dr. Abbas Unwala",
-          "image": "https://aurusdentalstudio.com/assets/logo.webp",
-          "url": "https://aurusdentalstudio.com",
+          "image": "https://drabbasunwala.com/assets/logo.webp",
+          "url": "https://drabbasunwala.com",
           "telephone": "+919820854665",
           "priceRange": "$$",
           "address": {
@@ -116,10 +116,10 @@ const routes = [
         },
         {
           "@type": "Dentist",
-          "@id": "https://aurusdentalstudio.com/#dentist-mumbai",
+          "@id": "https://drabbasunwala.com/#dentist-mumbai",
           "name": "Saifee Smiles Multispeciality Dental Clinic",
-          "image": "https://aurusdentalstudio.com/assets/logo.webp",
-          "url": "https://aurusdentalstudio.com",
+          "image": "https://drabbasunwala.com/assets/logo.webp",
+          "url": "https://drabbasunwala.com",
           "telephone": "+919820854665",
           "priceRange": "$$",
           "address": {
@@ -185,9 +185,9 @@ const routes = [
   {
     path: 'services',
     urlPath: 'services',
-    title: 'Aesthetic & Painless Dental Services | Clear Aligners, Laser, Extractions',
-    description: 'Explore the transformational dental treatments at Aurus Dental Studio. From Invisalign clear aligners, painless wisdom teeth extraction, teeth whitening, laser gum surgery, and dental crowns, we provide premium and anxiety-free oral care.',
-    keywords: 'laser dentistry pune, clear aligners cost pune, wisdom teeth removal pune, gum surgery cost pune, teeth cleaning pune, teeth whitening pune',
+    title: 'Aesthetic & Painless Dental Services | Dental Implants, Laser, Extractions',
+    description: 'Explore the transformational dental treatments at Aurus Dental Studio. From dental implants, painless wisdom teeth extraction, teeth whitening, laser gum surgery, and digital smile designing, we provide premium and anxiety-free oral care.',
+    keywords: 'laser dentistry pune, dental implants pune, wisdom teeth removal pune, gum surgery cost pune, teeth cleaning pune, teeth whitening pune, root canal treatment pune, pediatric dentist pune',
     schema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -276,13 +276,16 @@ for (const route of routes) {
   const { html } = render(route.path);
   
   // Build the route-specific head tags (metadata, OG, Twitter tags, JSON-LD schema)
-  const fullUrl = `https://aurusdentalstudio.com/${route.urlPath}`;
-  const defaultOgImage = 'https://aurusdentalstudio.com/assets/profile.webp';
+  const fullUrl = `https://drabbasunwala.com/${route.urlPath}`;
+  const defaultOgImage = 'https://drabbasunwala.com/assets/profile.webp';
   
   const headMeta = `
     <title>${route.title}</title>
     <meta name="description" content="${route.description}" />
     <meta name="keywords" content="${route.keywords}" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/logoicon.ico" />
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website" />
@@ -333,7 +336,7 @@ const robotsContent = `
 User-agent: *
 Allow: /
 
-Sitemap: https://aurusdentalstudio.com/sitemap.xml
+Sitemap: https://drabbasunwala.com/sitemap.xml
 `.trim();
 fs.writeFileSync(robotsPath, robotsContent);
 console.log('Created dist/robots.txt');
@@ -345,25 +348,25 @@ const sitemapContent = `
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aurusdentalstudio.com/</loc>
+    <loc>https://drabbasunwala.com/</loc>
     <lastmod>${todayDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aurusdentalstudio.com/about</loc>
+    <loc>https://drabbasunwala.com/about</loc>
     <lastmod>${todayDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurusdentalstudio.com/services</loc>
+    <loc>https://drabbasunwala.com/services</loc>
     <lastmod>${todayDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurusdentalstudio.com/contact</loc>
+    <loc>https://drabbasunwala.com/contact</loc>
     <lastmod>${todayDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -372,6 +375,17 @@ const sitemapContent = `
 `.trim();
 fs.writeFileSync(sitemapPath, sitemapContent);
 console.log('Created dist/sitemap.xml');
+
+// Copy favicon
+fs.copyFileSync(
+  path.resolve(__dirname, 'assets/logoicon.ico'),
+  path.resolve(__dirname, 'dist/logoicon.ico')
+);
+fs.copyFileSync(
+  path.resolve(__dirname, 'assets/logoicon.ico'),
+  path.resolve(__dirname, 'dist/favicon.ico')
+);
+console.log('Copied favicon to dist/logoicon.ico and dist/favicon.ico');
 
 // 10. Clean up dist-server
 fs.rmSync(path.resolve(__dirname, 'dist-server'), { recursive: true, force: true });

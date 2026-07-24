@@ -17,6 +17,7 @@ export interface ServiceItem {
   id: string;
   title: string;
   description: string;
+  summary: string;
   iconName: string;
   image: string;
   tag: string;

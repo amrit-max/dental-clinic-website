@@ -4,10 +4,10 @@ export const localBusinessSchema = {
   "@graph": [
     {
       "@type": "Dentist",
-      "@id": "https://aurusdentalstudio.com/#dentist-pune",
+      "@id": "https://drabbasunwala.com/#dentist-pune",
       "name": "Aurus Dental Studio - Dr. Abbas Unwala",
-      "image": "https://aurusdentalstudio.com/assets/logo.webp",
-      "url": "https://aurusdentalstudio.com",
+      "image": "https://drabbasunwala.com/assets/logo.webp",
+      "url": "https://drabbasunwala.com",
       "telephone": "+919820854665",
       "priceRange": "$$",
       "address": {
@@ -49,10 +49,10 @@ export const localBusinessSchema = {
     },
     {
       "@type": "Dentist",
-      "@id": "https://aurusdentalstudio.com/#dentist-mumbai",
+      "@id": "https://drabbasunwala.com/#dentist-mumbai",
       "name": "Saifee Smiles Multispeciality Dental Clinic",
-      "image": "https://aurusdentalstudio.com/assets/logo.webp",
-      "url": "https://aurusdentalstudio.com",
+      "image": "https://drabbasunwala.com/assets/logo.webp",
+      "url": "https://drabbasunwala.com",
       "telephone": "+919820854665",
       "priceRange": "$$",
       "address": {

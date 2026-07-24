@@ -28,96 +28,25 @@ export const features: FeatureItem[] = [
   }
 ];
 
-import s1 from '../assets/dsd.jpg';
-import s2 from '../assets/ddi.jpg';
-import s3 from '../assets/lgs.jpg';
-import s4 from '../assets/cab.jpeg';
-import s5 from '../assets/cb.jpg';
-import s6 from '../assets/tw.jpeg';
-import s7 from '../assets/7.jpg';
-import s8 from '../assets/pwt.jpg';
-import s9 from '../assets/tcp.jpg';
-import s10 from '../assets/ard.jpg';
-import s11 from '../assets/prt.jpg';
-import s12 from '../assets/pd.jpg';
+import tw from '../assets/tw.jpeg';
+import tcp from '../assets/tcp.jpg';
+import ddi from '../assets/ddi.jpg';
+import ard from '../assets/ard.jpg';
+import pwt from '../assets/pwt.jpg';
+import lgs from '../assets/lgs.jpg';
+import dsd from '../assets/dsd.jpg';
+import cb from '../assets/cb.jpg';
+import prt from '../assets/prt.jpg';
+import pd from '../assets/pd.jpg';
 
 export const services: ServiceItem[] = [
   {
     id: 'srv-1',
-    title: 'Digital Smile Designing',
-    description: 'Transform your smile with absolute precision using custom-designed porcelain veneers and laminates at Aurus Dental Studio in Pune and Mumbai. Digital Smile Designing (DSD) is a state-of-the-art methodology that allows us to plan and visualize aesthetic smile transformations before any treatment begins. Using advanced digital photography, high-resolution video scans, and software simulations, Dr. Abbas Unwala carefully analyzes your facial features, dental anatomy, and smile dynamics to craft a customized blueprint. Whether you want to correct discolored, chipped, misaligned, or unevenly spaced teeth, DSD gives you a realistic preview of your new look, ensuring you are fully aligned with the results. Our customized porcelain veneers and ultra-thin dental laminates are crafted from premium zirconia or E-Max ceramics to provide natural light reflection, superior strength, and exceptional durability. This comprehensive aesthetic treatment is perfect for patients seeking a complete smile makeover in Pune (Rasta Peth) and Mumbai (Mazgaon). We collaborate with top-tier dental labs to customize the shade, shape, and alignment of each restoration, delivering a balanced, radiant smile that enhances your facial aesthetics and builds long-term confidence.',
-    iconName: 'Smile',
-    image: s1,
-    tag: 'Cosmetic',
-    details: [
-      'Digital Smile Preview',
-      'Porcelain Veneers',
-      'Composite Laminates',
-      'Aesthetic Consultations'
-    ]
-  },
-  {
-    id: 'srv-2',
-    title: 'Laser Dentistry',
-    description: 'Experience minimally invasive, virtually painless dental treatments at Aurus Dental Studio using cutting-edge laser dentistry technology. Our advanced dental lasers are utilized across our Pune and Mumbai clinics to perform a wide variety of soft-tissue and hard-tissue procedures with unmatched precision, speed, and safety. Laser dentistry drastically reduces the need for traditional drills, scalpels, and sutures, providing a stress-free and quiet experience that relieves dental anxiety. This technology is highly effective for gum contouring (treating gummy smiles), laser cavity preparation, safe oral lesion removal, and sterilization of root canals. Because the laser beam cauterizes blood vessels and nerve endings as it cuts, patients experience minimal bleeding, reduced swelling, and little to no post-operative discomfort. Additionally, laser treatment promotes faster cellular regeneration, significantly accelerating your overall healing and recovery timeline. Whether you require cosmetic reshaping of your gum line in Mazgaon, Mumbai, or precise tooth preparations in Rasta Peth, Pune, Dr. Abbas Unwala employs state-of-the-art diode and Erbium lasers to deliver clean, accurate, and comfortable outcomes tailored to your health goals.',
-    iconName: 'Zap',
-    image: s2,
-    tag: 'Advanced',
-    details: [
-      'Gum Contouring',
-      'Cavity Preparation',
-      'Lesion Removal',
-      'Faster Recovery'
-    ]
-  },
-  {
-    id: 'srv-3',
-    title: 'Gum Surgery',
-    description: 'Restore the health and foundation of your smile with professional gum surgery and advanced periodontal care at Aurus Dental Studio. Periodontal health is critical, as healthy gums form the vital structural support for your teeth. Dr. Abbas Unwala offers specialized gum surgical procedures across Pune and Mumbai to address advanced gum diseases, periodontal pockets, and gum recession. Our treatments include scaling and root planing, pocket reduction surgery, and gingival grafting to cover exposed tooth roots. We also perform cosmetic crown lengthening to expose more natural tooth structure for aesthetic restorations. Left untreated, gum infections can lead to bone loss, chronic bad breath, and tooth mobility. Using micro-surgical tools and painless laser sterilization, we eradicate deep-seated bacterial plaque, rebuild damaged soft tissue, and secure the foundation of your teeth. Gums are restored to a firm, healthy, pink state, preventing future tooth loss and supporting your overall systemic health. If you are experiencing bleeding gums, recession, or persistent discomfort in Pune or Mumbai, our comprehensive periodontal therapies provide stable, long-lasting oral health and a secure basis for beautiful restorations.',
-    iconName: 'Activity',
-    image: s3,
-    tag: 'Periodontal',
-    details: [
-      'Grafting Procedures',
-      'Pocket Reduction',
-      'Crown Lengthening',
-      'Periodontal Therapy'
-    ]
-  },
-  {
-    id: 'srv-4',
-    title: 'Clear Aligners & Braces',
-    description: 'Achieve a perfectly aligned, beautiful smile with clear aligners and traditional orthodontic braces at Aurus Dental Studio. We provide advanced orthodontic solutions in Pune and Mumbai, specializing in Invisalign clear aligners, ceramic braces, and self-ligating metal braces. Clear aligners represent the pinnacle of modern, discreet orthodontics; these custom-made, transparent, medical-grade plastic trays fit snugly over your teeth, gently shifting them into alignment without the aesthetic disruption of metallic brackets. Aligners are fully removable, letting you eat, brush, and floss normally, keeping oral hygiene effortless. For complex bite corrections, structural malocclusions, or severe crowding, we offer premium ceramic braces that blend in with your natural tooth color, as well as high-performance metal braces. Dr. Abbas Unwala custom-plans your orthodontic journey using precise digital dental scans, mapping out your tooth movements step-by-step. With regular evaluations at our Rasta Peth, Pune and Mazgaon, Mumbai locations, we ensure your treatment progresses efficiently. Correcting misaligned teeth not only enhances your appearance and self-confidence but also improves chewing efficiency, speech clarity, and reduces the risk of jaw joint pain (TMJ disorders) and uneven enamel wear.',
-    iconName: 'Sparkles',
-    image: s4,
-    tag: 'Orthodontics',
-    details: [
-      'Invisalign Therapy',
-      'Ceramic Braces',
-      'Custom Retainers',
-      'Bite Correction'
-    ]
-  },
-  {
-    id: 'srv-5',
-    title: 'Crowns and Bridge',
-    description: 'Rebuild the strength, functionality, and beauty of damaged or missing teeth with custom-crafted dental crowns and bridges at Aurus Dental Studio. Serving patients in Pune and Mumbai, we specialize in high-strength zirconia crowns, premium E-Max ceramic restorations, and porcelain-fused-to-metal (PFM) bridges. A dental crown is a custom cap that fits over a severely decayed, cracked, or root-canal-treated tooth, protecting it from fracture and restoring its natural chewing force. A dental bridge, on the other hand, is an excellent fixed option to replace one or more missing teeth, using the adjacent healthy teeth as anchors to support a lifelike replacement tooth. Dr. Abbas Unwala utilizes high-precision digital scanners to capture exact physical dimensions, ensuring your crowns and bridges fit perfectly and align naturally with your bite. We pay close attention to custom shade matching, replicating the exact translucency and texture of your adjacent natural teeth. Whether you need a single implant-supported crown in Pune (Rasta Peth) or a multi-unit bridge in Mumbai (Mazgaon), our durable, biocompatible restorations restore structural integrity, prevent healthy teeth from shifting, and rebuild your confident, complete smile.',
-    iconName: 'Layers',
-    image: s5,
-    tag: 'Restorative',
-    details: [
-      'Zirconia Crowns',
-      'Fixed Bridges',
-      'Implant Crowns',
-      'Custom Shade Matching'
-    ]
-  },
-  {
-    id: 'srv-6',
-    title: 'Teeth Whitening & Gum Depigmentation',
+    title: 'Teeth Whitening',
     description: 'Reveal a bright, radiant smile with professional teeth whitening and specialized gum depigmentation treatments at Aurus Dental Studio in Pune and Mumbai. Over time, factors like diet, coffee, tea, smoking, and natural aging can cause stubborn external and internal tooth stains that normal brushing cannot remove. Our in-office chemical and laser teeth whitening procedures use advanced, safe whitening agents activated by specialized light technology, lifting stains and brightening your enamel by up to eight shades in a single appointment. For patients concerned with dark, dark-spotted, or hyperpigmented gums, we offer cosmetic gum depigmentation (often called gum bleaching). Using precise laser ablation, Dr. Abbas Unwala gently removes excess melanin pigments from the gum tissue, revealing healthy, pink gums underneath. The combination of bright teeth and beautifully toned gums creates a harmonious, youthful, and stunning smile symmetry. We also provide customized take-home whitening kits with professional-grade gel for easy maintenance. Transform your appearance, feel confident, and make a great first impression with our safe, fast, and highly effective aesthetic therapies in Pune (Rasta Peth) and Mumbai (Mazgaon).',
+    summary: 'Brighten your teeth by up to eight shades and remove excess gum discoloration. Our in-office laser treatments deliver a sparkling, symmetrical, and youthful smile makeover.',
     iconName: 'Sun',
-    image: s6,
+    image: tw,
     tag: 'Aesthetics',
     details: [
       'In-Office Whitening',
@@ -127,39 +56,12 @@ export const services: ServiceItem[] = [
     ]
   },
   {
-    id: 'srv-7',
-    title: 'Painless Extractions',
-    description: 'At Aurus Dental Studio in Pune and Mumbai, we perform safe, comfortable, and completely painless tooth extractions when a tooth is severely damaged, infected, or crowded beyond saving. We understand that tooth removal can cause significant anxiety, which is why Dr. Abbas Unwala utilizes advanced local anesthesia, computerized numbing techniques, and a compassionate, patient-first approach to make the process completely stress-free. Whether you need a simple extraction for a loose tooth or a surgical extraction for a root fractured below the gum line, we prioritize preserving the surrounding bone structure. Preserving the alveolar bone is critical if you plan to get a dental implant or bridge later. Our dental team provides comprehensive pre-operative consultation and detailed post-extraction care instructions, along with healing aids to accelerate recovery. We also offer options for dental implants or fixed bridges to replace the missing space immediately, maintaining your bite balance. Don\'t let a painful or infected tooth compromise your health—visit our clinics in Rasta Peth, Pune or Mazgaon, Mumbai for a gentle, painless extraction that restores comfort and protects your long-term oral well-being.',
-    iconName: 'HeartPulse',
-    image: s7,
-    tag: 'Surgical',
-    details: [
-      'Simple Extractions',
-      'Surgical Extractions',
-      'Local Anesthesia',
-      'Post-Op Care'
-    ]
-  },
-  {
-    id: 'srv-8',
-    title: 'Wisdom Teeth Removal',
-    description: 'Alleviate pain and protect your alignment with expert surgical wisdom teeth removal at Aurus Dental Studio. Wisdom teeth, or third molars, are the last to erupt and frequently lack adequate space in the jaw, leading to impaction, severe pain, gum infections, decay, and damage to adjacent healthy teeth. Dr. Abbas Unwala specializes in extracting impacted wisdom teeth using advanced micro-surgical instruments and low-force techniques to minimize bone and tissue disruption. Our clinics in Pune (Rasta Peth) and Mumbai (Mazgaon) utilize detailed digital X-rays to map the exact location of the tooth roots relative to your sensory nerves, guaranteeing a safe and highly predictable procedure. We perform these extractions under deep local anesthesia or conscious sedation, ensuring you remain comfortable and pain-free throughout. After the extraction, we guide you through a structured recovery protocol, providing custom care kits, pain management plans, and follow-up checks to ensure rapid healing. Proactive extraction of problematic wisdom teeth prevents long-term crowding of your front teeth, eliminates painful jaw stiffness, and protects your surrounding oral structures from chronic bacterial infections.',
-    iconName: 'ShieldAlert',
-    image: s8,
-    tag: 'Surgical',
-    details: [
-      'Impacted Teeth',
-      'Preventive Removal',
-      'Sedation Options',
-      'Surgical Expertise'
-    ]
-  },
-  {
-    id: 'srv-9',
+    id: 'srv-2',
     title: 'Teeth Cleaning & Polishing',
     description: 'Maintain outstanding oral hygiene, fresh breath, and prevent periodontal disease with professional teeth cleaning and polishing at Aurus Dental Studio. Daily brushing and flossing are essential, but they cannot completely remove hardened tartar (calculus) and bio-films that build up in hard-to-reach pockets along the gum line. Our advanced dental scaling uses ultrasonic scalers to gently shake loose and wash away stubborn tartar deposits without scraping your tooth enamel. Following scaling, we perform root planing to smooth the root surfaces, preventing future plaque buildup, and finish with professional polishing using a gentle prophy-paste to remove external stains and leave your teeth feeling exceptionally smooth. Regular scaling and polishing every six months is the most effective preventive measure against tooth decay, chronic bad breath, and gum inflammation. Dr. Abbas Unwala and our dental hygienists in Pune (Rasta Peth) and Mumbai (Mazgaon) also provide personalized advice on proper home care techniques, brushing pressures, and the best hygiene products. Invest in your health with a thorough professional cleaning to keep your teeth sparkling, your gums healthy, and your breath fresh.',
+    summary: 'Maintain excellent hygiene, fresh breath, and stain-free teeth with ultrasonic scaling and polishing. Protect your gums and prevent cavities with routine cleanings.',
     iconName: 'Droplets',
-    image: s9,
+    image: tcp,
     tag: 'Preventive',
     details: [
       'Ultrasonic Scaling',
@@ -169,11 +71,27 @@ export const services: ServiceItem[] = [
     ]
   },
   {
-    id: 'srv-10',
+    id: 'srv-3',
+    title: 'Digital Dentistry with Implants',
+    description: 'Experience the future of restorative dentistry with advanced digital dentistry and dental implants at Aurus Dental Studio. Serving patients across Pune and Mumbai, Dr. Abbas Unwala utilizes micro-precise digital planning tools to restore missing teeth with exceptional safety and longevity. Dental implants represent the gold standard for replacing lost teeth, functioning like natural roots to support custom porcelain or zirconia crowns. Using computerized 3D intraoral scans and detailed CBCT radiography, we map out the exact placement of each implant relative to your jawbone and nerves prior to the procedure. This digital workflow eliminates guesswork, minimizes surgical incisions, reduces treatment times, and ensures a faster, highly comfortable recovery. Whether you need a single tooth replacement, a multi-unit bridge, or full-mouth restorations, our clinics in Rasta Peth, Pune and Saifee Smiles in Mazgaon, Mumbai provide implant therapies designed for stable biting force and natural smile aesthetics. By using bio-compatible titanium implants that fuse naturally with your bone, we preserve your facial structure and prevent healthy adjacent teeth from shifting. Choose digital dentistry for a seamless, comfortable, and life-changing smile transformation.',
+    summary: 'Restore missing teeth permanently and comfortably with digital implants. Using 3D bone scanning and guided placement, we rebuild your natural bite and facial structure.',
+    iconName: 'Layers',
+    image: ddi,
+    tag: 'Restorative',
+    details: [
+      'Single & Multi-Tooth Implants',
+      'Computerized 3D Scanning',
+      'Computer-Guided Placement',
+      'Zirconia Implant Crowns'
+    ]
+  },
+  {
+    id: 'srv-4',
     title: 'Aesthetic Restorative Dentistry',
     description: 'Restore the natural form, beauty, and function of your teeth with advanced aesthetic restorative dentistry at Aurus Dental Studio. Serving patients in Pune and Mumbai, our restorative solutions go beyond simple fillings to rebuild structural integrity and enhance your smile aesthetics. We specialize in tooth-colored composite restorations, ceramic inlays and onlays, and conservative bonding techniques. Whether you have decayed, chipped, worn, or broken teeth, Dr. Abbas Unwala utilizes state-of-the-art materials that mimic the light reflectivity and shade of natural enamel. Traditional metal fillings can weaken tooth structure and stand out visually, whereas our bio-compatible composite resin and porcelain restorations bond directly to the tooth, strengthening it while blending in seamlessly. Using high-magnification diagnostics, we ensure micro-precise fits that protect your bite alignment and seal the tooth against future decay. At our clinics in Rasta Peth, Pune and Mazgaon, Mumbai, we design each restoration to align harmoniously with your facial features. Aesthetic restorative dentistry not only prevents further decay but also restores full chewing capability, prevents healthy teeth from shifting, and helps you laugh and speak with complete confidence.',
+    summary: 'Restore decayed, chipped, or broken teeth with natural, tooth-colored composite bonding and ceramic onlays. Rebuild structural strength invisibly without metal fillings.',
     iconName: 'Sparkles',
-    image: s10,
+    image: ard,
     tag: 'Restorative',
     details: [
       'Composite Bonding',
@@ -183,11 +101,72 @@ export const services: ServiceItem[] = [
     ]
   },
   {
-    id: 'srv-11',
-    title: 'Painless Root Canal Treatment',
+    id: 'srv-5',
+    title: 'Painless Wisdom Tooth Extraction',
+    description: 'Alleviate pain and protect your alignment with expert surgical wisdom teeth removal at Aurus Dental Studio. Wisdom teeth, or third molars, are the last to erupt and frequently lack adequate space in the jaw, leading to impaction, severe pain, gum infections, decay, and damage to adjacent healthy teeth. Dr. Abbas Unwala specializes in extracting impacted wisdom teeth using advanced micro-surgical instruments and low-force techniques to minimize bone and tissue disruption. Our clinics in Pune (Rasta Peth) and Mumbai (Mazgaon) utilize detailed digital X-rays to map the exact location of the tooth roots relative to your sensory nerves, guaranteeing a safe and highly predictable procedure. We perform these extractions under deep local anesthesia or conscious sedation, ensuring you remain comfortable and pain-free throughout. After the extraction, we guide you through a structured recovery protocol, providing custom care kits, pain management plans, and follow-up checks to ensure rapid healing. Proactive extraction of problematic wisdom teeth prevents long-term crowding of your front teeth, eliminates painful jaw stiffness, and protects your surrounding oral structures from chronic bacterial infections.',
+    summary: 'Relieve jaw pain and protect your tooth alignment with expert wisdom teeth extractions. Using low-force surgical techniques, we remove impacted molars safely and comfortably.',
+    iconName: 'ShieldAlert',
+    image: pwt,
+    tag: 'Surgical',
+    details: [
+      'Impacted Teeth',
+      'Preventive Removal',
+      'Sedation Options',
+      'Surgical Expertise'
+    ]
+  },
+  {
+    id: 'srv-6',
+    title: 'Laser Gum Surgery',
+    description: 'Restore the health and foundation of your smile with professional gum surgery and advanced periodontal care at Aurus Dental Studio. Periodontal health is critical, as healthy gums form the vital structural support for your teeth. Dr. Abbas Unwala offers specialized gum surgical procedures across Pune and Mumbai to address advanced gum diseases, periodontal pockets, and gum recession. Our treatments include scaling and root planing, pocket reduction surgery, and gingival grafting to cover exposed tooth roots. We also perform cosmetic crown lengthening to expose more natural tooth structure for aesthetic restorations. Left untreated, gum infections can lead to bone loss, chronic bad breath, and tooth mobility. Using micro-surgical tools and painless laser sterilization, we eradicate deep-seated bacterial plaque, rebuild damaged soft tissue, and secure the foundation of your teeth. Gums are restored to a firm, healthy, pink state, preventing future tooth loss and supporting your overall systemic health. If you are experiencing bleeding gums, recession, or persistent discomfort in Pune or Mumbai, our comprehensive periodontal therapies provide stable, long-lasting oral health and a secure basis for beautiful restorations.',
+    summary: 'Restore gum health and aesthetic balance with professional laser therapy and grafting. We treat gum recession, pocket infections, and uneven gum lines comfortably.',
+    iconName: 'Activity',
+    image: lgs,
+    tag: 'Periodontal',
+    details: [
+      'Grafting Procedures',
+      'Pocket Reduction',
+      'Crown Lengthening',
+      'Periodontal Therapy'
+    ]
+  },
+  {
+    id: 'srv-7',
+    title: 'Digital Smile Designing',
+    description: 'Transform your smile with absolute precision using custom-designed porcelain veneers and laminates at Aurus Dental Studio in Pune and Mumbai. Digital Smile Designing (DSD) is a state-of-the-art methodology that allows us to plan and visualize aesthetic smile transformations before any treatment begins. Using advanced digital photography, high-resolution video scans, and software simulations, Dr. Abbas Unwala carefully analyzes your facial features, dental anatomy, and smile dynamics to craft a customized blueprint. Whether you want to correct discolored, chipped, misaligned, or unevenly spaced teeth, DSD gives you a realistic preview of your new look, ensuring you are fully aligned with the results. Our customized porcelain veneers and ultra-thin dental laminates are crafted from premium zirconia or E-Max ceramics to provide natural light reflection, superior strength, and exceptional durability. This comprehensive aesthetic treatment is perfect for patients seeking a complete smile makeover in Pune (Rasta Peth) and Mumbai (Mazgaon). We collaborate with top-tier dental labs to customize the shade, shape, and alignment of each restoration, delivering a balanced, radiant smile that enhances your facial aesthetics and builds long-term confidence.',
+    summary: 'Plan and visualize your dream smile with custom porcelain veneers and laminates. Using advanced digital scans, we craft a personalized makeover aligned with your facial features.',
+    iconName: 'Smile',
+    image: dsd,
+    tag: 'Cosmetic',
+    details: [
+      'Digital Smile Preview',
+      'Porcelain Veneers',
+      'Composite Laminates',
+      'Aesthetic Consultations'
+    ]
+  },
+  {
+    id: 'srv-8',
+    title: 'Crowns and Bridges',
+    description: 'Rebuild the strength, functionality, and beauty of damaged or missing teeth with custom-crafted dental crowns and bridges at Aurus Dental Studio. Serving patients in Pune and Mumbai, we specialize in high-strength zirconia crowns, premium E-Max ceramic restorations, and porcelain-fused-to-metal (PFM) bridges. A dental crown is a custom cap that fits over a severely decayed, cracked, or root-canal-treated tooth, protecting it from fracture and restoring its natural chewing force. A dental bridge, on the other hand, is an excellent fixed option to replace one or more missing teeth, using the adjacent healthy teeth as anchors to support a lifelike replacement tooth. Dr. Abbas Unwala utilizes high-precision digital scanners to capture exact physical dimensions, ensuring your crowns and bridges fit perfectly and align naturally with your bite. We pay close attention to custom shade matching, replicating the exact translucency and texture of your adjacent natural teeth. Whether you need a single implant-supported crown in Pune (Rasta Peth) or a multi-unit bridge in Mumbai (Mazgaon), our durable, biocompatible restorations restore structural integrity, prevent healthy teeth from shifting, and rebuild your confident, complete smile.',
+    summary: 'Restore damaged or missing teeth with custom ceramic and zirconia crowns and bridges. We rebuild tooth strength, durability, and natural shape for a fully functional bite.',
+    iconName: 'Layers',
+    image: cb,
+    tag: 'Restorative',
+    details: [
+      'Zirconia Crowns',
+      'Fixed Bridges',
+      'Implant Crowns',
+      'Custom Shade Matching'
+    ]
+  },
+  {
+    id: 'srv-9',
+    title: 'Painless Rootcanal Treatment',
     description: 'Save your natural teeth and eliminate toothache pain with advanced, painless root canal treatment at Aurus Dental Studio. A root canal becomes necessary when the dental pulp—the soft tissue containing nerves and blood vessels inside your tooth—becomes infected or inflamed due to deep decay, repeated dental procedures, or a crack. Many patients associate root canals with pain, but with modern endodontic technology, the procedure is as comfortable and routine as receiving a standard filling. Dr. Abbas Unwala is a highly skilled endodontics specialist in Pune and Mumbai, utilizing state-of-the-art rotary instruments, digital apex locators, and painless local anesthesia techniques to ensure a completely stress-free treatment. During the procedure, the infected pulp is carefully removed, the root canal system is thoroughly cleaned, sterilized using precise dental lasers, and sealed with a biocompatible material to prevent re-infection. Finally, the tooth is protected and restored to full function with a custom zirconia or ceramic crown. Our clinics in Pune (Rasta Peth) and Mumbai (Mazgaon) offer conservative endodontic care that preserves your natural smile, relieves dental pain immediately, and prevents the spread of infection to surrounding bone tissue.',
+    summary: 'Save infected or deeply decayed teeth comfortably with laser-assisted root canal therapy. Dr. Abbas Unwala cleans, sterilizes, and seals the canals to eliminate pain.',
     iconName: 'Award',
-    image: s11,
+    image: prt,
     tag: 'Surgical',
     details: [
       'Single-Visit Root Canals',
@@ -197,11 +176,12 @@ export const services: ServiceItem[] = [
     ]
   },
   {
-    id: 'srv-12',
+    id: 'srv-10',
     title: 'Pediatric Dentistry',
     description: 'Build a lifetime of healthy, beautiful smiles for your children with gentle and specialized pediatric dentistry at Aurus Dental Studio. Early childhood dental experiences shape a child\'s attitude toward oral health for life, which is why Dr. Abbas Unwala and our pediatric team in Pune and Mumbai focus on creating a warm, friendly, and anxiety-free environment. Pediatric dentistry targets infants, children, and teenagers, providing preventive services such as professional cleanings, fluoride applications, and dental sealants that shield young teeth from cavities. We also specialize in gentle tooth restorations, pediatric root canals (pulpotomies), and space maintainers to ensure adult teeth erupt in correct alignment. Our team takes the time to educate both children and parents on proper brushing techniques, flossing habits, and dietary choices that prevent tooth decay. Whether you are visiting our clinic in Rasta Peth, Pune or Saifee Smiles in Mazgaon, Mumbai, we make dental checkups fun and engaging. Don\'t wait for your child to experience tooth pain—bring them in for routine checkups to establish good habits, monitor jaw development, and ensure their growing teeth remain strong, healthy, and cavity-free.',
+    summary: 'Introduce children to healthy dental habits in a warm, friendly, and fear-free environment. We offer preventive cleanings, sealants, and gentle orthodontic monitoring.',
     iconName: 'Shield',
-    image: s12,
+    image: pd,
     tag: 'Preventive',
     details: [
       'Child-Friendly Checkups',

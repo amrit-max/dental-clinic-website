@@ -69,13 +69,13 @@ export default function Services({ setActivePage }: ServicesProps) {
                     </span>
                   </div>
 
-                  <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div className="space-y-4">
                       <div className="flex items-center space-x-4">
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-blue-light to-brand-blue/10 text-brand-blue flex items-center justify-center border border-brand-blue/10 shadow-sm shrink-0">
                           <LucideIcon name="Smile" size={22} />
                         </div>
-                        <h3 className="font-display font-black text-2xl text-deep-navy group-hover:text-brand-blue transition-colors duration-300">
+                        <h3 className="font-display font-black text-xl sm:text-2xl text-deep-navy group-hover:text-brand-blue transition-colors duration-300">
                           {service.title}
                         </h3>
                       </div>
@@ -84,16 +84,16 @@ export default function Services({ setActivePage }: ServicesProps) {
                       </p>
                     </div>
 
-                    <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
+                    <div className="pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
                       <button
                         id={`srv-details-btn-${service.id}`}
                         onClick={() => setSelectedService(service)}
-                        className="group inline-flex items-center text-sm font-bold text-brand-blue hover:text-brand-blue-hover transition-colors cursor-pointer"
+                        className="group inline-flex items-center text-xs sm:text-sm font-bold text-brand-blue hover:text-brand-blue-hover transition-colors cursor-pointer shrink-0"
                       >
                         <span>View Treatment Details</span>
                         <LucideIcon name="ChevronRight" className="ml-1.5 group-hover:translate-x-1 transition-transform" size={16} />
                       </button>
-                      <span className="font-mono text-xs font-bold text-slate-300">[ 0{idx + 1} ]</span>
+                      <span className="font-mono text-[10px] sm:text-xs font-bold text-slate-300 truncate">[ 0{idx + 1} ]</span>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -119,10 +119,10 @@ export default function Services({ setActivePage }: ServicesProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 12 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-premium-lg relative border border-slate-100/50"
+              className="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-premium-lg relative border border-slate-100/50 max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="h-52 overflow-hidden relative">
+              <div className="h-40 sm:h-52 overflow-hidden relative">
                 <img
                   src={selectedService.image}
                   alt={selectedService.title}
@@ -141,17 +141,17 @@ export default function Services({ setActivePage }: ServicesProps) {
                   <span className="bg-accent-amber text-deep-navy text-[10px] font-mono font-bold px-3 py-1 rounded-md uppercase tracking-widest shadow-md">
                     {selectedService.tag}
                   </span>
-                  <h3 className="font-display font-black text-3xl text-white mt-2.5">
+                  <h3 className="font-display font-black text-xl sm:text-3xl text-white mt-2.5">
                     {selectedService.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="p-8 space-y-6">
+              <div className="p-5 sm:p-8 space-y-6">
                 <div className="space-y-2">
                   <h4 className="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">Treatment Summary</h4>
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans font-light">
-                    {selectedService.description}
+                    {selectedService.summary}
                   </p>
                 </div>
 
@@ -169,11 +169,11 @@ export default function Services({ setActivePage }: ServicesProps) {
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-100 flex items-center justify-end space-x-4">
+                <div className="pt-6 border-t border-slate-100 flex flex-col-reverse sm:flex-row items-center sm:justify-end gap-3 sm:space-x-4">
                   <button
                     id="modal-close-secondary-btn"
                     onClick={() => setSelectedService(null)}
-                    className="px-5 py-3 text-xs font-bold text-slate-500 hover:text-slate-700 hover:bg-slate-50 rounded-xl transition-all cursor-pointer"
+                    className="w-full sm:w-auto px-5 py-3 text-xs font-bold text-slate-500 hover:text-slate-700 hover:bg-slate-50 rounded-xl transition-all cursor-pointer text-center"
                   >
                     Close
                   </button>
@@ -183,7 +183,7 @@ export default function Services({ setActivePage }: ServicesProps) {
                       setSelectedService(null);
                       handleNavigate('contact');
                     }}
-                    className="group relative inline-flex items-center justify-center px-6 py-3 text-xs font-bold text-deep-navy bg-accent-amber hover:bg-accent-amber-hover rounded-xl shadow-md transition-all cursor-pointer"
+                    className="w-full sm:w-auto group relative inline-flex items-center justify-center px-6 py-3 text-xs font-bold text-deep-navy bg-accent-amber hover:bg-accent-amber-hover rounded-xl shadow-md transition-all cursor-pointer text-center"
                   >
                     <span>Inquire About This Treatment</span>
                     <LucideIcon name="ArrowRight" className="ml-1.5 group-hover:translate-x-1 transition-transform" size={14} />

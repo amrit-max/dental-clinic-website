@@ -142,13 +142,26 @@ export default function Footer({ setActivePage }: FooterProps) {
         </div>
       </div>
 
-      {/* Copyright Divider */}
-      <div id="footer-bottom" className="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-        <p>© {currentYear} Aurus Dental Studio. All rights reserved.</p>
-        <div className="flex space-x-6">
+      <div id="footer-bottom" className="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p className="order-1 md:order-none text-slate-400">© {currentYear} Aurus Dental Studio. All rights reserved.</p>
+        
+        <p className="flex items-center gap-1 order-3 md:order-none">
+          <span>Made with</span>
+          <span className="text-red-500">❤️</span>
+          <span>by</span>
+          <a
+            href="https://www.instagram.com/thewebthread/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-brand-blue hover:text-white font-medium transition-colors"
+          >
+            TheWebThread
+          </a>
+        </p>
+
+        <div className="flex space-x-6 order-2 md:order-none">
           <a href="#privacy" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
           <a href="#terms" className="hover:text-white transition-colors duration-300">Terms of Service</a>
-          <a href="#compliance" className="hover:text-white transition-colors duration-300">Regulatory Disclosures</a>
         </div>
       </div>
     </footer>

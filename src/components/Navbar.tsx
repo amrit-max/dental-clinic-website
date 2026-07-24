@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Page } from '../types';
 import LucideIcon from './LucideIcon';
 import logoImg from '../../assets/logo.webp';
+import logoImg2 from '../../assets/logo2.jpeg';
 
 interface NavbarProps {
   activePage: Page;
@@ -60,18 +61,38 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
           id="navbar-logo-btn"
           href="/"
           onClick={(e) => handleLinkClick(e, 'home')}
-          className="flex items-center space-x-3 focus:outline-none group cursor-pointer animate-fade-in"
+          className="flex items-center space-x-2.5 sm:space-x-3.5 focus:outline-none group cursor-pointer animate-fade-in"
         >
-          <img 
-            src={logoImg} 
-            alt="Aurus Dental Studio - Pune and Mumbai Premium Dental Practice" 
-            className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
-          />
-          <span className={`hidden md:block font-display font-extrabold text-xl tracking-tight transition-colors duration-300 ${
-            useDarkText ? 'text-deep-navy' : 'text-white'
-          }`}>
-            AURUS<span className="text-brand-blue">DENTAL</span>
-          </span>
+          {/* Aurus Dental Branding */}
+          <div className="flex items-center space-x-2">
+            <img 
+              src={logoImg} 
+              alt="Aurus Dental Studio" 
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
+            />
+            <span className={`hidden lg:block font-display font-extrabold text-sm xl:text-base tracking-tight transition-colors duration-300 ${
+              useDarkText ? 'text-deep-navy' : 'text-white'
+            }`}>
+              AURUS<span className="text-brand-blue">DENTAL</span>
+            </span>
+          </div>
+
+          {/* Divider */}
+          <span className={`h-5 sm:h-6 md:h-7 w-px ${useDarkText ? 'bg-slate-200' : 'bg-white/20'} transition-colors duration-300`} />
+
+          {/* Saifee Smiles Branding */}
+          <div className="flex items-center space-x-2">
+            <img 
+              src={logoImg2} 
+              alt="Saifee Smiles" 
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain rounded-full border border-slate-100/50 group-hover:scale-105 transition-transform duration-300" 
+            />
+            <span className={`hidden lg:block font-display font-extrabold text-sm xl:text-base tracking-tight transition-colors duration-300 ${
+              useDarkText ? 'text-deep-navy' : 'text-white'
+            }`}>
+              SAIFEE<span className="text-brand-blue">SMILES</span>
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}
