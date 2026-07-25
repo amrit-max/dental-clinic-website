@@ -3,7 +3,7 @@ import { StatItem, FeatureItem, ServiceItem, TeamMember, Testimonial, ProcessSte
 export const stats: StatItem[] = [
   { id: 'stat-1', value: '15+', label: 'Years of Experience' },
   { id: 'stat-2', value: '10k+', label: 'Happy Smiles' },
-  { id: 'stat-3', value: '99%', label: 'Patient Satisfaction' },
+  { id: 'stat-3', value: '100%', label: 'Patient Satisfaction' },
   { id: 'stat-4', value: '24/7', label: 'Emergency Care' }
 ];
 
