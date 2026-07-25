@@ -146,11 +146,11 @@ export default function Home({ setActivePage }: HomeProps) {
       <section className="bg-white border-b border-slate-100 relative z-20 py-4 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center sm:justify-around items-center gap-6 text-sm font-bold text-slate-600 font-mono">
           <div className="flex items-center gap-2 hover:text-brand-blue transition-colors cursor-default">
-            <LucideIcon name="Feather" className="text-brand-blue" size={18} />
+            <LucideIcon name="Check" className="text-brand-blue" size={18} />
             <span className="tracking-wide">PAINLESS TREATMENT</span>
           </div>
           <div className="flex items-center gap-2 hover:text-brand-blue transition-colors cursor-default">
-            <LucideIcon name="CreditCard" className="text-brand-blue" size={18} />
+            <LucideIcon name="Check" className="text-brand-blue" size={18} />
             <span className="tracking-wide">EASY PAYMENT PLANS</span>
           </div>
         </div>
