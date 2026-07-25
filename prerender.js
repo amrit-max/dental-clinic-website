@@ -185,9 +185,9 @@ const routes = [
   {
     path: 'services',
     urlPath: 'services',
-    title: 'Aesthetic & Painless Dental Services | Dental Implants, Laser, Extractions',
-    description: 'Explore the transformational dental treatments at Aurus Dental Studio. From dental implants, painless wisdom teeth extraction, teeth whitening, laser gum surgery, and digital smile designing, we provide premium and anxiety-free oral care.',
-    keywords: 'laser dentistry pune, dental implants pune, wisdom teeth removal pune, gum surgery cost pune, teeth cleaning pune, teeth whitening pune, root canal treatment pune, pediatric dentist pune',
+    title: 'Aesthetic & Painless Dental Services | Dental Implants, Clear Aligners, Laser',
+    description: 'Explore the transformational dental treatments at Aurus Dental Studio. From dental implants, orthodontic treatment & clear aligners, painless wisdom teeth extraction, teeth whitening, and laser gum surgery, we provide premium and anxiety-free oral care.',
+    keywords: 'laser dentistry pune, clear aligners cost pune, dental implants pune, wisdom teeth removal pune, gum surgery cost pune, teeth cleaning pune, teeth whitening pune, root canal treatment pune, pediatric dentist pune',
     schema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",

@@ -38,6 +38,7 @@ import dsd from '../assets/dsd.jpg';
 import cb from '../assets/cb.jpg';
 import prt from '../assets/prt.jpg';
 import pd from '../assets/pd.jpg';
+import cab from '../assets/cab.jpeg';
 
 export const services: ServiceItem[] = [
   {
@@ -188,6 +189,21 @@ export const services: ServiceItem[] = [
       'Cavity-Preventive Sealants',
       'Fluoride Therapy',
       'Myofunctional Evaluations'
+    ]
+  },
+  {
+    id: 'srv-11',
+    title: 'Orthodontic Treatment & Clean Aligners',
+    description: 'Achieve a perfectly straight, beautiful smile discreetly with premium orthodontic treatments and clear aligners at Aurus Dental Studio. We specialize in Invisalign clear aligners and modern aesthetic braces across our Pune and Mumbai clinics. Clear aligners represent the ultimate choice for patients seeking comfortable, metal-free, and virtually invisible teeth straightening. Crafted from medical-grade, BPA-free transparent polymer, these custom alignment trays fit snugly over your teeth to gently guide them into position. Because they are fully removable, you can maintain your regular brushing, flossing, and dietary habits without any restrictions. For complex orthodontic corrections, skeletal malocclusions, or severe crowding, Dr. Abbas Unwala also offers advanced ceramic braces that blend naturally with your tooth shade. We map out your entire treatment trajectory using 3D digital dental scans to visualize your smile correction step-by-step. Regular checkups at our Rasta Peth, Pune and Mazgaon, Mumbai locations ensure your teeth shift smoothly and safely. Beyond aesthetics, correcting dental alignment improves chewing forces, speech clarity, and reduces risks of uneven enamel wear and jaw joint (TMJ) discomfort.',
+    summary: 'Straighten your teeth discreetly with premium Invisalign clear aligners and modern braces. Correct overcrowding and bite issues with comfortable, removable, and invisible trays.',
+    iconName: 'Sparkles',
+    image: cab,
+    tag: 'Orthodontics',
+    details: [
+      'Invisalign Clear Aligners',
+      'Aesthetic Ceramic Braces',
+      '3D Digital Scan Planning',
+      'Custom Bite Correction'
     ]
   }
 ];
