@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImg from '../../assets/profile.webp';
+import profileImg from '../../assets/p2.jpeg';
 import clinicVideo from '../../assets/video.mp4';
 import galleryImg1 from '../../assets/1.jpg';
 import galleryImg2 from '../../assets/4.jpg';
@@ -107,54 +107,26 @@ export default function Home({ setActivePage }: HomeProps) {
               </AnimatedSection>
             </div>
             
-            {/* Right Side: Profile Image */}
             <div className="lg:col-span-4 flex justify-center lg:justify-end items-center relative z-10 mt-8 lg:mt-0">
-              <AnimatedSection direction="left" delay={0.4} className="lg:-translate-y-8 relative w-full flex justify-center lg:justify-end">
+              <AnimatedSection direction="left" delay={0.4} className="lg:-translate-y-8 relative w-full flex flex-col items-center lg:items-end">
                 
                 {/* Subtle Background Glow behind the image */}
                 <div className="absolute inset-0 bg-brand-blue/30 blur-3xl rounded-full z-0 scale-[0.8] opacity-80" />
 
-                <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(8,145,178,0.25)] group z-10 border-4 border-deep-navy">
-                  <img 
-                    src={profileImg} 
-                    alt="Dr. Abbas Saifuddin Unwala - Founder and Chief Dentist at Aurus Dental Studio" 
-                    className="w-full h-full object-cover object-center scale-[1.15] group-hover:scale-[1.2] transition-transform duration-700 ease-out" 
-                  />
-                  {/* Clean HTML Nameplate Overlay - positioned at absolute bottom to hide baked-in text */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white px-5 py-2.5 rounded-t-xl shadow-lg border-t border-x border-slate-200 whitespace-nowrap z-20 min-w-[200px] text-center">
-                    <span className="text-[13px] font-bold text-deep-navy block">Dr. Abbas Saifuddin</span>
+                <div className="relative flex flex-col items-center space-y-4 z-10">
+                  <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(8,145,178,0.25)] group border-4 border-deep-navy">
+                    <img 
+                      src={profileImg} 
+                      alt="Dr. Abbas Saifuddin Unwala - Founder and Chief Dentist at Aurus Dental Studio" 
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" 
+                    />
                   </div>
-                </div>
 
-                {/* Floating Stat Cards */}
-                <div className="absolute -left-6 top-8 z-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-2xl hidden md:flex items-center gap-3 animate-[float_4s_ease-in-out_infinite]">
-                  <div className="w-9 h-9 rounded-full bg-brand-blue/20 flex items-center justify-center text-accent-amber">
-                    <LucideIcon name="ShieldCheck" size={18} />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-white font-bold text-sm leading-tight">20+ Years</span>
-                    <span className="text-slate-300 text-[10px] uppercase tracking-wider font-semibold">Experience</span>
-                  </div>
-                </div>
-
-                <div className="absolute -right-4 top-1/2 z-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-2xl hidden md:flex items-center gap-3 animate-[float_5s_ease-in-out_infinite_reverse]">
-                  <div className="w-9 h-9 rounded-full bg-accent-amber/20 flex items-center justify-center text-accent-amber">
-                    <LucideIcon name="Users" size={18} />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-white font-bold text-sm leading-tight">5000+</span>
-                    <span className="text-slate-300 text-[10px] uppercase tracking-wider font-semibold">Happy Smiles</span>
-                  </div>
-                </div>
-
-                {/* Moved Google Rating card up to avoid bottom-center nameplate */}
-                <div className="absolute -left-8 bottom-16 z-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-2xl hidden md:flex items-center gap-3 animate-[float_4.5s_ease-in-out_infinite]">
-                  <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
-                    <LucideIcon name="Star" className="text-[#FBBF24] fill-[#FBBF24]" size={18} />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-white font-bold text-sm leading-tight">4.9/5</span>
-                    <span className="text-slate-300 text-[10px] uppercase tracking-wider font-semibold">Google Rating</span>
+                  {/* Name Label below the circular image */}
+                  <div className="text-center">
+                    <h3 className="text-lg sm:text-xl font-display font-extrabold text-white tracking-wide">
+                      Dr. Abbas Saifuddin Unwala
+                    </h3>
                   </div>
                 </div>
 
@@ -171,24 +143,15 @@ export default function Home({ setActivePage }: HomeProps) {
         </div>
       </section>
 
-      {/* 1.5. TRUST BAR (Below the fold) */}
       <section className="bg-white border-b border-slate-100 relative z-20 py-4 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center sm:justify-between items-center gap-6 text-sm font-bold text-slate-600 font-mono">
-          <div className="flex items-center gap-2 hover:text-brand-blue transition-colors cursor-default">
-            <LucideIcon name="ShieldCheck" className="text-brand-blue" size={18} />
-            <span className="tracking-wide">ISO CERTIFIED</span>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center sm:justify-around items-center gap-6 text-sm font-bold text-slate-600 font-mono">
           <div className="flex items-center gap-2 hover:text-brand-blue transition-colors cursor-default">
             <LucideIcon name="Feather" className="text-brand-blue" size={18} />
             <span className="tracking-wide">PAINLESS TREATMENT</span>
           </div>
           <div className="flex items-center gap-2 hover:text-brand-blue transition-colors cursor-default">
-            <LucideIcon name="MessageCircle" className="text-brand-blue" size={18} />
-            <span className="tracking-wide">FREE CONSULTATION</span>
-          </div>
-          <div className="flex items-center gap-2 hover:text-brand-blue transition-colors cursor-default">
             <LucideIcon name="CreditCard" className="text-brand-blue" size={18} />
-            <span className="tracking-wide">EMI AVAILABLE</span>
+            <span className="tracking-wide">EASY PAYMENT PLANS</span>
           </div>
         </div>
       </section>

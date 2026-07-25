@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Page } from '../types';
 import LucideIcon from './LucideIcon';
 import AnimatedSection from './AnimatedSection';
-import profileImg from '../../assets/profile.webp';
+import profileImg from '../../assets/p2.jpeg';
 import logoImg from '../../assets/logo.webp';
 
 interface AboutProps {
