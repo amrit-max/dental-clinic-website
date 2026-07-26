@@ -62,9 +62,10 @@ export default function Services({ setActivePage }: ServicesProps) {
                     <img
                       src={service.image}
                       alt={service.title}
+                      loading="lazy"
                       className="w-full h-full object-contain bg-slate-50 group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    <span className="absolute top-4 left-4 bg-deep-navy/90 backdrop-blur-md px-3.5 py-1.5 text-[10px] font-mono font-bold text-white tracking-widest rounded-lg shadow-md z-20">
+                    <span className="absolute top-4 left-4 bg-deep-navy px-3.5 py-1.5 text-[10px] font-mono font-bold text-white tracking-widest rounded-lg shadow-md z-20">
                       {service.tag}
                     </span>
                   </div>

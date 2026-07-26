@@ -408,7 +408,7 @@ export default function Home({ setActivePage }: HomeProps) {
                 loop
                 muted
                 playsInline
-                className="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out [will-change:transform]"
               />
             </AnimatedSection>
             

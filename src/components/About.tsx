@@ -73,6 +73,7 @@ export default function About({ setActivePage }: AboutProps) {
                 <img
                   src={profileImg}
                   alt="Dr. Abbas Saifuddin Unwala"
+                  loading="lazy"
                   className="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </AnimatedSection>
@@ -228,6 +229,7 @@ export default function About({ setActivePage }: AboutProps) {
                 <img
                   src={logoImg}
                   alt="Aurus Dental Studio Logo"
+                  loading="lazy"
                   className="w-full h-[450px] object-contain p-12 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </AnimatedSection>

@@ -51,6 +51,7 @@ export default function AnimatedSection({
       viewport={{ once: true, margin: '-20px' }}
       variants={getVariants()}
       className={className}
+      style={{ willChange: 'transform, opacity' }}
     >
       {children}
     </motion.div>

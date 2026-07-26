@@ -51,7 +51,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/85 backdrop-blur-md shadow-premium border-b border-slate-100/50 py-3.5'
+          ? 'bg-white/95 lg:bg-white/85 lg:backdrop-blur-md shadow-premium border-b border-slate-100/50 py-3.5'
           : 'bg-transparent py-6'
       }`}
     >
