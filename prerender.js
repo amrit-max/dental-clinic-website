@@ -179,7 +179,7 @@ const routes = [
     path: 'about',
     urlPath: 'about',
     title: 'About Dr. Abbas Unwala & Aurus Dental Studio | Pune & Mumbai',
-    description: 'Meet Dr. Abbas Saifuddin Unwala, MDS — founder & chief dentist at Aurus Dental Studio, Pune, and Saifee Smiles, Mumbai. With 15+ years of clinical excellence, including roles at Jaslok Hospital, Dr. Unwala offers top-tier precision-focused dental care.',
+    description: 'Meet Dr. Abbas Saifuddin Unwala, MDS, founder & chief dentist at Aurus Dental Studio, Pune, and Saifee Smiles, Mumbai. With 15+ years of clinical excellence, including roles at Jaslok Hospital, Dr. Unwala offers top-tier precision-focused dental care.',
     keywords: 'dr abbas unwala, dentist rasta peth, best endodontist pune, dental clinic history, saifee smiles, aurus dental team',
   },
   {

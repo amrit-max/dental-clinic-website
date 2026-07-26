@@ -21,7 +21,7 @@ export default function About({ setActivePage }: AboutProps) {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Meet Dr. Abbas Saifuddin Unwala, MDS — Director of Aurus Dental Studio, Pune. 15+ years of expertise in precision, patient-first dental care across Pune and Mumbai.');
+    metaDescription.setAttribute('content', 'Meet Dr. Abbas Saifuddin Unwala, MDS, Director of Aurus Dental Studio, Pune. 15+ years of expertise in precision, patient-first dental care across Pune and Mumbai.');
     
     // Clean up function not strictly necessary for simple title/meta in standard SPA 
     // unless we need to revert it on unmount.
@@ -61,7 +61,7 @@ export default function About({ setActivePage }: AboutProps) {
 
                 <AnimatedSection direction="up" delay={0.2}>
                   <p>
-                    What started as a commitment to precision-focused restorative and cosmetic dentistry has grown into a trusted name across two cities. At Aurus, every treatment plan is personally overseen — patients are never just another appointment on the schedule, but a smile we're personally invested in getting right.
+                    What started as a commitment to precision-focused restorative and cosmetic dentistry has grown into a trusted name across two cities. At Aurus, every treatment plan is personally overseen. Patients are never just another appointment on the schedule, but a smile we're personally invested in getting right.
                   </p>
                 </AnimatedSection>
               </div>
@@ -104,7 +104,7 @@ export default function About({ setActivePage }: AboutProps) {
                 </div>
                 <h3 className="font-display font-black text-2xl sm:text-3xl text-deep-navy mb-4">Our Mission</h3>
                 <p className="text-slate-600 leading-relaxed text-sm sm:text-base font-light">
-                  To deliver anxiety-free, patient-centered dental care that combines advanced technology with genuine warmth — helping every patient achieve a healthier, more confident smile.
+                  To deliver anxiety-free, patient-centered dental care that combines advanced technology with genuine warmth, helping every patient achieve a healthier, more confident smile.
                 </p>
               </div>
             </AnimatedSection>
@@ -154,7 +154,7 @@ export default function About({ setActivePage }: AboutProps) {
                   Dr. Abbas Saifuddin Unwala
                 </h3>
                 <p className="text-accent-amber font-mono font-bold tracking-widest text-xs uppercase mb-6 relative z-10">
-                  BDS (Mumbai), MDS (Mumbai) — Director & Chief Dentist
+                  BDS (Mumbai), MDS (Mumbai), Director & Chief Dentist
                 </p>
                 
                 <div className="space-y-4 text-slate-600 font-light text-sm sm:text-base relative z-10">
@@ -162,7 +162,7 @@ export default function About({ setActivePage }: AboutProps) {
                     Dr. Unwala is the Director and Chief Dentist at Aurus Dental Studio, Pune, and founder of Saifee Smiles Multispeciality Dental Clinic, Mumbai. A graduate of the Government Dental College and Hospital, Mumbai, he ranked 1st in his postgraduate entrance examination and holds an MDS in Conservative Dentistry and Endodontics.
                   </p>
                   <p>
-                    His clinical experience includes roles at Sassoon Hospital, Pune, and Jaslok Hospital and Research Centre, Mumbai — giving him a rare depth of expertise now brought directly to every patient at Aurus.
+                    His clinical experience includes roles at Sassoon Hospital, Pune, and Jaslok Hospital and Research Centre, Mumbai, giving him a rare depth of expertise now brought directly to every patient at Aurus.
                   </p>
                 </div>
               </AnimatedSection>
@@ -249,11 +249,11 @@ export default function About({ setActivePage }: AboutProps) {
                 {[
                   {
                     title: 'Direct Access to Dr. Unwala',
-                    desc: "You're never handed off to a junior associate — every treatment plan is personally reviewed and overseen by Dr. Unwala himself."
+                    desc: "You're never handed off to a junior associate. Every treatment plan is personally reviewed and overseen by Dr. Unwala himself."
                   },
                   {
                     title: 'Transparent Treatment & Pricing',
-                    desc: 'No hidden costs. Every treatment plan is explained clearly upfront, with honest recommendations — never unnecessary procedures.'
+                    desc: 'No hidden costs. Every treatment plan is explained clearly upfront, with honest recommendations, and never unnecessary procedures.'
                   },
                   {
                     title: 'Advanced Technology, Comfort-First Approach',
