@@ -8,6 +8,7 @@ interface AnimatedSectionProps {
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   id?: string;
   key?: React.Key;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export default function AnimatedSection({
@@ -15,7 +16,8 @@ export default function AnimatedSection({
   className = '',
   delay = 0,
   direction = 'up',
-  id
+  id,
+  onClick
 }: AnimatedSectionProps) {
   const getVariants = () => {
     if (direction === 'none') {
@@ -52,6 +54,7 @@ export default function AnimatedSection({
       variants={getVariants()}
       className={className}
       style={{ willChange: 'transform, opacity' }}
+      onClick={onClick}
     >
       {children}
     </motion.div>

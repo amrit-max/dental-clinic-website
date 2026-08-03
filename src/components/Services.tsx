@@ -322,7 +322,7 @@ export default function Services({ setActivePage }: ServicesProps) {
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mt-4">
               Ready to Transform <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber">
+              <span className="text-accent-amber">
                 Your Smile?
               </span>
             </h2>

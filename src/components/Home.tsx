@@ -8,7 +8,7 @@ import beforeAfter1 from '../../assets/5.jpg';
 import beforeAfter2 from '../../assets/6.jpg';
 import beforeAfter3 from '../../assets/7.jpg';
 import beforeAfter4 from '../../assets/8.jpg';
-import beforeAfter5 from '../../assets/9.jpg';
+import beforeAfter5 from '../../assets/dsd.jpg';
 import beforeAfter6 from '../../assets/10.jpg';
 import featureImg1 from '../../assets/b1.png';
 import featureImg2 from '../../assets/b2.png';
@@ -24,9 +24,15 @@ interface HomeProps {
 }
 
 export default function Home({ setActivePage }: HomeProps) {
-  const handleNavigate = (page: Page) => {
+  const handleNavigate = (page: Page, hash?: string) => {
     setActivePage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const newPath = page === 'home' ? '/' : `/${page}${hash || ''}`;
+    if (typeof window !== 'undefined' && window.location.pathname !== newPath) {
+      window.history.pushState(null, '', newPath);
+    }
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -64,16 +70,15 @@ export default function Home({ setActivePage }: HomeProps) {
                       <LucideIcon key={i} name="Star" className="text-accent-amber fill-accent-amber" size={12} />
                     ))}
                   </span>
-                  <span className="text-white font-semibold">Best Dental Clinic In Pune</span>
+                  <span className="text-white font-semibold">Top rated dental clinic in Pune and Mumbai by Google</span>
                 </span>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.2}>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-1">
                   Best Dental Clinic in Pune & Mumbai <br />
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber text-3xl sm:text-4xl lg:text-5xl">
+                  <span className="relative inline-block text-accent-amber text-3xl sm:text-4xl lg:text-5xl">
                     Aurus Dental Studio
-                    <span className="absolute left-0 bottom-1 lg:bottom-2 w-full h-[3px] bg-gradient-to-r from-brand-blue to-accent-amber rounded-full" />
                   </span>
                 </h1>
               </AnimatedSection>
@@ -296,10 +301,10 @@ export default function Home({ setActivePage }: HomeProps) {
               </div>
             </AnimatedSection>
 
-            {/* Gallery 2 - Middle card offset down for rhythm, opposite rounded corners */}
             <AnimatedSection 
               direction="up" 
               delay={0.2} 
+              onClick={() => handleNavigate('about', '#about-team')}
               className="h-80 sm:h-[420px] md:translate-y-8 editorial-mask-2 overflow-hidden shadow-premium-lg relative group duotone-blue-tint cursor-pointer"
             >
               <img
@@ -311,6 +316,10 @@ export default function Home({ setActivePage }: HomeProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent flex flex-col justify-end p-8 z-10">
                 <span className="text-xs font-mono font-bold text-accent-amber uppercase tracking-widest mb-1">[ 02 ] EXPERT TEAM</span>
                 <span className="text-white font-display font-extrabold text-xl sm:text-2xl">Specialized Dentists</span>
+                <span className="mt-3 inline-flex items-center text-xs font-bold text-accent-amber group-hover:text-white transition-colors gap-1.5 focus:outline-none bg-white/5 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-xl w-fit">
+                  <span>Meet Our Team</span>
+                  <LucideIcon name="ArrowRight" size={12} className="group-hover:translate-x-1 transition-transform" />
+                </span>
               </div>
             </AnimatedSection>
 
@@ -370,13 +379,13 @@ export default function Home({ setActivePage }: HomeProps) {
                 key={idx}
                 direction="up"
                 delay={0.1 * idx}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/20 transition-all duration-500 group relative aspect-[4/3] cursor-pointer"
+                className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-premium hover:shadow-premium-lg hover:border-brand-blue/20 transition-all duration-500 group relative aspect-square cursor-pointer"
               >
                 <img
                   src={img}
                   alt={`Before and After Smile Transformation Case ${idx + 1}`}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-contain bg-white group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                   <span className="text-white font-display font-extrabold text-lg flex items-center">
@@ -549,7 +558,7 @@ export default function Home({ setActivePage }: HomeProps) {
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mt-4">
               Ready to Achieve Your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber">
+              <span className="text-accent-amber">
                 Perfect Smile?
               </span>
             </h2>

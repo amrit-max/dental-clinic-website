@@ -260,6 +260,13 @@ const routes = [
     }
   },
   {
+    path: 'course',
+    urlPath: 'course',
+    title: 'Continuing Dental Education Courses | Aurus Dental Studio',
+    description: 'Advance your clinical dentistry skills with continuing dental education courses led by MDS specialist Dr. Abbas Saifuddin Unwala. Join our hands-on dental masterclasses in Pune & Mumbai.',
+    keywords: 'dental course pune, dental masterclass mumbai, clinical dentistry training, hands-on dental courses, dr abbas unwala courses, continuing dental education',
+  },
+  {
     path: 'contact',
     urlPath: 'contact',
     title: 'Contact Aurus Dental Studio | Book Appointment in Pune & Mumbai',

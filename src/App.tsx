@@ -6,6 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Course from './components/Course';
 import { motion, AnimatePresence } from 'motion/react';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -14,7 +15,7 @@ export default function App({ initialPage }: { initialPage?: Page } = {}) {
     if (initialPage) return initialPage;
     if (typeof window !== 'undefined') {
       const path = window.location.pathname.replace(/^\/|\/$/g, '') as Page || 'home';
-      const validPages: Page[] = ['home', 'about', 'services', 'contact'];
+      const validPages: Page[] = ['home', 'about', 'services', 'course', 'contact'];
       return validPages.includes(path) ? path : 'home';
     }
     return 'home';
@@ -24,7 +25,7 @@ export default function App({ initialPage }: { initialPage?: Page } = {}) {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname.replace(/^\/|\/$/g, '') as Page || 'home';
-      const validPages: Page[] = ['home', 'about', 'services', 'contact'];
+      const validPages: Page[] = ['home', 'about', 'services', 'course', 'contact'];
       if (validPages.includes(path)) {
         setActivePage(path);
       } else {
@@ -55,6 +56,8 @@ export default function App({ initialPage }: { initialPage?: Page } = {}) {
         return <About setActivePage={handlePageChange} />;
       case 'services':
         return <Services setActivePage={handlePageChange} />;
+      case 'course':
+        return <Course setActivePage={handlePageChange} />;
       case 'contact':
         return <Contact setActivePage={handlePageChange} />;
       default:

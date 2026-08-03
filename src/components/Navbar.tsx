@@ -30,6 +30,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     { label: 'Home', value: 'home' },
     { label: 'About', value: 'about' },
     { label: 'Services', value: 'services' },
+    { label: 'Continue Dental Course', value: 'course' },
     { label: 'Contact', value: 'contact' }
   ];
 

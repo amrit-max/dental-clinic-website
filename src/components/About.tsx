@@ -23,8 +23,17 @@ export default function About({ setActivePage }: AboutProps) {
     }
     metaDescription.setAttribute('content', 'Meet Dr. Abbas Saifuddin Unwala, MDS, Director of Aurus Dental Studio, Pune. 15+ years of expertise in precision, patient-first dental care across Pune and Mumbai.');
     
-    // Clean up function not strictly necessary for simple title/meta in standard SPA 
-    // unless we need to revert it on unmount.
+    // Scroll to team section if hash is present
+    if (typeof window !== 'undefined' && window.location.hash === '#about-team') {
+      const scrollTimeout = setTimeout(() => {
+        const teamElement = document.getElementById('about-team');
+        if (teamElement) {
+          teamElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 400); // 400ms delay to allow transitions and layout to settle
+      
+      return () => clearTimeout(scrollTimeout);
+    }
   }, []);
 
   const handleNavigate = (page: Page) => {
@@ -288,6 +297,102 @@ export default function About({ setActivePage }: AboutProps) {
         </div>
       </section>
 
+      {/* 5.5. OUR SPECIALISTS TEAM */}
+      <section id="about-team" className="py-24 bg-white border-t border-slate-100 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection direction="up" className="text-center mb-16">
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full bg-brand-blue-light text-brand-blue border border-brand-blue/10 font-mono mb-3">
+              <span className="w-1.5 h-1.5 bg-accent-amber rounded-full" />
+              CLINICAL SPECIALISTS
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl font-black text-deep-navy tracking-tight">
+              Our Team of Experts
+            </h2>
+            <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto mt-3">
+              Meet the highly qualified dental specialists delivering precise, comfortable, and world-class care in Pune and Mumbai.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            {/* Mumbai Column */}
+            <div className="lg:col-span-7 space-y-8">
+              <AnimatedSection direction="up">
+                <h3 className="font-display font-black text-2xl text-deep-navy pb-3 border-b border-slate-100 flex items-center gap-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-blue" />
+                  Mumbai Team <span className="text-xs font-normal text-slate-400 font-sans">(Saifee Smiles)</span>
+                </h3>
+              </AnimatedSection>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { name: 'Dr. Ruquiyah Mehraj', specialty: 'General Dentist', icon: 'Smile' },
+                  { name: 'Dr. Sanaya Mehta', specialty: 'Orthodontist', icon: 'Smile' },
+                  { name: 'Dr. Sanjana Manjrekar', specialty: 'Pedodontist', icon: 'Smile' },
+                  { name: 'Dr. Afsah Siddiqui', specialty: 'Prosthodontist', icon: 'Smile' },
+                  { name: 'Dr. Cherry Jain', specialty: 'Periodontist', icon: 'Smile' }
+                ].map((member, idx) => (
+                  <AnimatedSection
+                    key={idx}
+                    direction="up"
+                    delay={0.05 * idx}
+                    className="p-6 rounded-2xl bg-slate-50 border border-slate-100/80 shadow-sm hover:shadow-premium hover:border-brand-blue/20 hover:bg-white transition-all duration-300 group flex items-center space-x-4"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-brand-blue-light/75 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                      <LucideIcon name={member.icon} size={18} />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-bold text-base text-deep-navy group-hover:text-brand-blue transition-colors">
+                        {member.name}
+                      </h4>
+                      <p className="text-xs font-mono text-accent-amber font-semibold uppercase tracking-wider mt-0.5">
+                        {member.specialty}
+                      </p>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+
+            {/* Pune Column */}
+            <div className="lg:col-span-5 space-y-8">
+              <AnimatedSection direction="up">
+                <h3 className="font-display font-black text-2xl text-deep-navy pb-3 border-b border-slate-100 flex items-center gap-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-accent-amber" />
+                  Pune Team <span className="text-xs font-normal text-slate-400 font-sans">(Aurus Dental Studio)</span>
+                </h3>
+              </AnimatedSection>
+
+              <div className="grid grid-cols-1 gap-6">
+                {[
+                  { name: 'Dr. Amit Anthony', specialty: 'Orthodontist', icon: 'Smile' },
+                  { name: 'Dr. Sneha Hedge', specialty: 'Prosthodontist', icon: 'Smile' },
+                  { name: 'Dr. Shweta Uplenchwar', specialty: 'Periodontist', icon: 'Smile' }
+                ].map((member, idx) => (
+                  <AnimatedSection
+                    key={idx}
+                    direction="up"
+                    delay={0.05 * idx}
+                    className="p-6 rounded-2xl bg-slate-50 border border-slate-100/80 shadow-sm hover:shadow-premium hover:border-brand-blue/20 hover:bg-white transition-all duration-300 group flex items-center space-x-4"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-accent-amber/10 text-accent-amber flex items-center justify-center shrink-0 group-hover:bg-accent-amber group-hover:text-white transition-colors duration-300">
+                      <LucideIcon name={member.icon} size={18} />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-bold text-base text-deep-navy group-hover:text-brand-blue transition-colors">
+                        {member.name}
+                      </h4>
+                      <p className="text-xs font-mono text-accent-amber font-semibold uppercase tracking-wider mt-0.5">
+                        {member.specialty}
+                      </p>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. CTA BANNER */}
       <section id="about-cta-banner" className="py-24 bg-deep-navy relative overflow-hidden text-center bg-dot-pattern-light">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-brand-blue/20 rounded-full blur-[140px] pointer-events-none z-0" />
@@ -297,7 +402,7 @@ export default function About({ setActivePage }: AboutProps) {
           <AnimatedSection direction="up">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mt-4">
               Ready for Your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-brand-blue to-accent-amber">
+              <span className="text-accent-amber">
                 Perfect Smile?
               </span>
             </h2>

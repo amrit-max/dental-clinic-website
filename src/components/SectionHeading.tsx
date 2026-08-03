@@ -44,7 +44,7 @@ export default function SectionHeading({
     return (
       <Tag className={`${baseClass} ${fontClass}`}>
         {parts[0]}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-amber underline decoration-accent-amber/40 decoration-wavy decoration-2">
+        <span className="text-accent-amber">
           {accentWord}
         </span>
         {parts[1]}

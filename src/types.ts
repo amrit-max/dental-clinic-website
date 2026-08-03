@@ -1,4 +1,4 @@
-export type Page = 'home' | 'about' | 'services' | 'contact';
+export type Page = 'home' | 'about' | 'services' | 'course' | 'contact';
 
 export interface StatItem {
   id: string;
